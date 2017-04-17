@@ -1,0 +1,18 @@
+.Loading-Container {
+  margin: 0 auto;
+  margin-top: 300px;
+}
+
+.Spin-Kit {
+  width: 52px;
+  margin: 0 auto;
+}
+
+.Loading-Container p {
+  color: #E1E1E1;
+  font-weight: 200;
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100px;
+}

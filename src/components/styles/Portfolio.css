@@ -1,0 +1,51 @@
+
+
+.portfolioContainer {
+  text-align: center;
+  margin-top: 30px;
+  animation: fadein 0.75s forwards;
+}
+
+.optionContainer {
+  margin: 20px 50px;
+  display: inline-block;
+  background-color: #FCFCFC;
+  border: solid 10px black;
+  height: 400px;
+  width: 300px;
+  -webkit-box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.15);
+}
+
+.optionContainer img {
+  background-color: grey;
+  width: 300px;
+  border-bottom: solid 5px black;
+}
+.optionContainer h1 {
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 35px;
+  margin-left: 20px;
+  letter-spacing: 1px;
+  color: black;
+}
+.optionContainer p {
+  text-align: left;
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #AAAAAA;
+}
+
+@keyframes scale-on {
+  0% {transform: scale(1);}
+  100% {transform: scale(1.05);}
+}
+
+@keyframes scale-off {
+  0% {transform: scale(1.05);}
+  100% {transform: scale(1.0);}
+}
+
