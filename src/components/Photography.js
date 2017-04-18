@@ -4,7 +4,10 @@ import { Motion, spring } from 'react-motion';
 // Stylesheets
 import './styles/Photography.css'
 
-const preset = {stiffness: 150, damping: 25}
+// Components
+import Loading from './Loading'
+
+const preset = {stiffness: 150, damping: 10}
 
 
 // Media
@@ -49,13 +52,13 @@ class Photography extends React.Component {
             this.state.isLoading
             ? <div><div className="imgLoading"><div className="triangle"/></div></div>
             : <Motion 
-              defaultStyle={{x: -50, y: 0, z: 10}} 
-              style={{x: spring(0, preset), y: spring(1, {stiffness: 75}), z: spring(1, preset)}}>
+              defaultStyle={{x: 0.9, y: 0}} 
+              style={{x: spring(1, preset), y: spring(1, {stiffness: 75}), z: spring(1, preset)}}>
                 {value =>{
                   const { x, y, z } = value;
                   let style = {
                     // transform: `scale(${z})`,
-                    transform: `translateY(${x}%)`,
+                    transform: `scale(${x})`,
                     opacity: y
                   }
                   return <img src={ImageArray[this.state.imgIndex]} style={style}  alt="" className="slideImg" onLoad={this.handleLoad}/>

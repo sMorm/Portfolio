@@ -17,7 +17,7 @@
   -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  animation: dropdown 0.75s forwards;
+  animation: fadein 0.75s forwards;
 }
 
 .mobileContainer {

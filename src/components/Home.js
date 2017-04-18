@@ -1,6 +1,7 @@
 // Dependencies
 import React from 'react';
 import MediaQuery from 'react-media';
+import { Motion, spring } from 'react-motion';
 
 // Stylesheets
 import './styles/Home.css';
@@ -26,10 +27,19 @@ class Home extends React.Component {
   }
   render(){
     return (
+    <Motion defaultStyle={{ x: 0, y: -20 }}
+    style={{ x: spring(1), y: spring(0, {stiffness: 100, damping: 20})}}>
+    {value => {
+      const { x, y } = value;
+      const style = {
+        transform: `translateY(${y}%)`,
+        opacity: x
+      }
+      return ( 
       <MediaQuery query="(max-width: 750px)">
         {matches => matches
           ? <HomeMobile />
-          :  <div className="homeContainer">
+          :  <div className="homeContainer" style={style}>
               <div className='profileContainer'>
                 <div className='profileInfoStyle'>
                     <img src={profIMG} className='picStyle' alt="Profile" onLoad={this.loaded}/>
@@ -42,13 +52,19 @@ class Home extends React.Component {
               </div>
             <Social />
             </div>
-      }
+          }
       </MediaQuery>
-  ); 
+      )
+      }
+    }
+    </Motion>
+      )
   }
 
 }
 
 
-
 export default Home;
+
+
+

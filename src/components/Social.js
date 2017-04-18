@@ -4,7 +4,7 @@ const socialContainer = {
   marginTop: 50,
   marginBottom: 100,
   display: 'flex',
-  justifyContent: 'center'
+  justifyContent: 'center',
 }
 
 const logoSize = {
@@ -15,10 +15,14 @@ const logoSize = {
   marginRight: 30
 }
 
+const linkStyle = {
+  cursor: 'pointer'
+}
+
 const Social = () => {
   return (
     <div style={socialContainer}>
-      <a href='https://github.com/sMorm' target='_blank'>
+      <a href='https://github.com/sMorm' target='_blank' style={{linkStyle}}>
         <img src='http://i.imgur.com/l5WHWSX.png' style={logoSize} alt='GitHub'/>
       </a>
       <a href='https://linkedin.com/in/sereymorm' target='_blank'>
