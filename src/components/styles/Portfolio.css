@@ -19,10 +19,18 @@
   box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.15);
 }
 
+.optionContainer.mobile {
+  height: 300px;
+  width: 225px;
+}
+
 .optionContainer img {
   background-color: grey;
   width: 300px;
+}
 
+.optionContainer.mobile img {
+  width: 225px;
 }
 .optionContainer h1 {
   text-align: left;
@@ -32,12 +40,18 @@
   letter-spacing: 1px;
   color: black;
 }
+.optionContainer.mobile h1 {
+  font-size: 20px;
+}
 .optionContainer p {
   text-align: left;
   margin-top: 25px;
   margin-left: 20px;
   margin-right: 20px;
   color: #AAAAAA;
+}
+.optionContainer.mobile p {
+  font-size: 12px;
 }
 
 @keyframes scale-on {

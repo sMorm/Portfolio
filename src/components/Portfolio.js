@@ -9,6 +9,7 @@ import './styles/Portfolio.css'
 
 // Components
 import Loading from './Loading';
+import PortfolioMobile from './PortfolioMobile';
 
 
 // Media
@@ -36,7 +37,7 @@ class Portfolio extends React.Component {
       <img src={Photography} alt="option 1" onLoad={this.isLoading} style={{width: 0.001}}/>
       <MediaQuery query="(max-width: 750px)">
         {matches => matches
-          ? <p> mobile </p>
+          ? <PortfolioMobile />
           : <div>{
             this.state.imgLoaded > 1 
             ? (
@@ -46,10 +47,6 @@ class Portfolio extends React.Component {
                     <img src={Programming} alt="placeholder" onLoad={this.isLoading}/>
                     <h1>Programming</h1>
                     <p>Some of the applications that I've worked on. Consists of side-projects and work from my studies.</p>
-                    <p>See more at&nbsp;
-                    <a href="https://github.com/smorm" target="_blank" style={{ color: 'grey'}}>
-                     Github</a>
-                    </p>
                   </div>
                 </Link>
                 
@@ -58,9 +55,6 @@ class Portfolio extends React.Component {
                     <img src={Photography} alt="shot by me" onLoad={this.isLoading}/>
                     <h1>Photography</h1>
                     <p>A collection of my work ranging from street and cityscape photographies to my travels.</p>
-                    <p>See more at&nbsp;
-                    <a href="http://vsco.co/sereymorm>vsco" target="_blank" style={{ color: 'grey'}}>
-                     vsco</a></p>
                   </div>
                 </Link>
               </div>

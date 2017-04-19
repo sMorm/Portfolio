@@ -6,8 +6,6 @@ import { Motion, spring } from 'react-motion';
 // Stylesheets
 import './styles/Photography.css'
 
-// Components
-import PhotographyMobile from './PhotographyMobile'
 
 const preset = {stiffness: 150, damping: 10}
 
@@ -15,7 +13,7 @@ const preset = {stiffness: 150, damping: 10}
 // Media
 import ImageArray from './ImageArray'
 
-class Photography extends React.Component {
+class PhotographyMobile extends React.Component {
   constructor() {
     super();
     this.nextImg = this.nextImg.bind(this);
@@ -45,14 +43,10 @@ class Photography extends React.Component {
   }
   render(){
     return (
-      <MediaQuery query="(max-width: 750px)">
-        {matches => matches
-          ? <PhotographyMobile/>
-          :
           <div>
             <div className="slideContainer">
             <img src={ImageArray[this.state.imgIndex]} alt="" style={{height:1}} onLoad={this.handleLoad}/>
-              <button onClick={() => this.nextImg('prev')} className="slideButton">prev</button>
+              <button onClick={() => this.nextImg('prev')} className="slideButton mobile">&lt;</button>
               {
                 this.state.isLoading
                 ? <div><div className="imgLoading"><div className="triangle"/></div></div>
@@ -65,20 +59,18 @@ class Photography extends React.Component {
                         transform: `scale(${x})`,
                         opacity: y
                       }
-                      return <img src={ImageArray[this.state.imgIndex]} style={style}  alt="" className="slideImg" onLoad={this.handleLoad}/>
+                      return <img src={ImageArray[this.state.imgIndex]} style={style}  alt="" className="slideImg mobile" onLoad={this.handleLoad}/>
                      }
                     }
                   </Motion>
                 }
-              <button onClick={() => this.nextImg('next')} className="slideButton">next</button>
+              <button onClick={() => this.nextImg('next')} className="slideButton mobile">&gt;</button>
             </div>
             <p className="vsco">See more at <a href='http://vsco.co/sereymorm'>vsco</a></p>
           </div>
-        }
-      </MediaQuery>
-
     );
   }
 }
 
-export default Photography;
+
+export default PhotographyMobile;
