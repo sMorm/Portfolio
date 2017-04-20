@@ -1,14 +1,26 @@
 import React from 'react';
+import { Motion, spring } from 'react-motion'
 
-import PageHeader from './PageHeader'
-
-const headerImg = "http://imgur.com/Et85aCz.png";
-
+import './styles/App.css'
 const About = () => {
   return(
-    <div>
-      <PageHeader title="About" img={headerImg} filter='rgba(0, 0, 0,0.1)'/>
+    <Motion defaultStyle={{ x: 0, y: -20 }}
+    style={{ x: spring(1), y: spring(1, {stiffness: 100, damping: 8})}}>
+    {value => {
+      const { x, y } = value;
+      const style = {
+        transform: `translateY(${y}%)`,
+        opacity: x
+      }
+      return ( 
+    <div className="tempBlock" style={style}>
+      <h1>Under Construction. Check back soon!</h1>
     </div>
+    )
+  }
+}
+</Motion>
+
   );
 }
 

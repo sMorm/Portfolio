@@ -51,16 +51,18 @@ class Photography extends React.Component {
           :
           <div>
             <div className="slideContainer">
+            <img src={ImageArray[this.state.imgIndex - 1]} alt="" style={{height:1}} onLoad={this.handleLoad}/>
             <img src={ImageArray[this.state.imgIndex]} alt="" style={{height:1}} onLoad={this.handleLoad}/>
+            <img src={ImageArray[this.state.imgIndex + 1]} alt="" style={{height:1}} onLoad={this.handleLoad}/>
               <button onClick={() => this.nextImg('prev')} className="slideButton">prev</button>
               {
                 this.state.isLoading
                 ? <div><div className="imgLoading"><div className="triangle"/></div></div>
                 : <Motion 
                   defaultStyle={{x: 0.9, y: 0.25}} 
-                  style={{x: spring(1, preset), y: spring(1, {stiffness: 75}), z: spring(1, preset)}}>
+                  style={{x: spring(1, preset), y: spring(1, {stiffness: 75})}}>
                     {value =>{
-                      const { x, y, z } = value;
+                      const { x, y} = value;
                       let style = {
                         transform: `scale(${x})`,
                         opacity: y

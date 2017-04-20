@@ -27,6 +27,19 @@ body {
   text-decoration: none;
   color: grey;
 }
+
+.tempBlock {
+  display: flex;
+  width: 230px;
+  height: 230px;
+  padding: 20px;
+  margin: 0 auto;
+  color: white;
+  margin-top: 50px;
+  justify-content: center;
+  align-content: center;
+  background-color: salmon;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

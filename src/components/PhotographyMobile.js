@@ -1,10 +1,6 @@
 // Dependencies
 import React from 'react';
-import MediaQuery from 'react-media';
 import { Motion, spring } from 'react-motion';
-
-// Stylesheets
-import './styles/Photography.css'
 
 
 const preset = {stiffness: 150, damping: 10}
@@ -49,12 +45,12 @@ class PhotographyMobile extends React.Component {
               <button onClick={() => this.nextImg('prev')} className="slideButton mobile">&lt;</button>
               {
                 this.state.isLoading
-                ? <div><div className="imgLoading"><div className="triangle"/></div></div>
+                ? <div><div className="imgLoading mobile"><div className="triangle mobile"/></div></div>
                 : <Motion 
                   defaultStyle={{x: 0.9, y: 0.25}} 
-                  style={{x: spring(1, preset), y: spring(1, {stiffness: 75}), z: spring(1, preset)}}>
+                  style={{x: spring(1, preset), y: spring(1, {stiffness: 75})}}>
                     {value =>{
-                      const { x, y, z } = value;
+                      const { x, y } = value;
                       let style = {
                         transform: `scale(${x})`,
                         opacity: y

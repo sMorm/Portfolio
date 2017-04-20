@@ -1,0 +1,106 @@
+.mailContainer {
+  background-color: #F1F1F1;
+  width: 480px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 50px;
+  -webkit-box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.2);
+}
+
+.mail-mobile {
+  width: 200px;
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #F1F1F1;
+  -webkit-box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.2);
+}
+.mail-mobile h1{
+  font-size: 30px;
+  margin-top: 0px;
+}
+.mail-mobile input {
+  display: block;
+  border: none;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 150px;
+  text-align: center;
+  border-radius: 0;
+}
+.mail-mobile textarea {
+  display: block;
+  border: 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border-radius: 0;
+}
+.mail-mobile button {
+  width: 50px;
+  text-align: center;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0px 67px;
+  margin-top: 10px;
+}
+.mailContainer h1{
+  font-size: 50px;
+  margin-top: -20px;
+}
+.mailContainer input {
+  display: block;
+  width: 200px;
+  margin-top: 20px;
+  border: none;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+
+}
+
+.mailContainer textarea {
+  position: fixed;
+  width: 250px;
+  height: 133px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: -137px;
+  margin-left: 230px;
+  border: none;
+}
+
+.mailContainer button {
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  height: 20px;
+  float: right;
+  outline: none;
+  margin-top: 10px;
+  background-color: transparent;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sent {
+  cursor: none;
+  animation: pullup 0.5s forwards;
+}
+
+@keyframes pullup {
+  0% {transform: translateY(50%); opacity: 0;}
+  70% {transform: translateY(-55%); opacity: 1;}
+  90% {transform: translateY(10%); opacity: 1;}
+  100% {transform: translateY(0%); opacity: 1;}
+}
