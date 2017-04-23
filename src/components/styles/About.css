@@ -1,0 +1,46 @@
+.bioContainer {
+  height: 400px;
+  width: 285px;
+
+  border: solid 1px transparent;
+  margin: 0 auto;
+  margin-top: 7vh;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.bioContainer hr {
+  width: 82%;
+  border: solid 1px #f1f1f1;
+}
+
+.bioContainer h1 {
+  margin-left: 25px;
+}
+
+.bioContainer p {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 12px;
+  color: lightgrey;
+  font-size: 18px;
+  text-align: left;
+}
+
+.tempLink {
+  display: block;
+  width: 125px;
+  padding: 10px 18px;
+  border-radius: 5px;
+  background-color: salmon;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 80px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}

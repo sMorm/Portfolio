@@ -1,11 +1,13 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
+import { ChasingDots } from 'better-react-spinkit';
 import MediaQuery from 'react-media';
 import axios from 'axios'
 
 import Social from './Social'
 
 import './styles/Contact.css'
+const baseURL = 'http://sample-env.5qpmzezbye.us-east-1.elasticbeanstalk.com/send/'
 class Contact extends React.Component {
   constructor(){
     super();
@@ -17,20 +19,25 @@ class Contact extends React.Component {
       subject: '',
       text: '',
       didSend: false,
-      failedToSend: false
+      failedToSend: false,
+      isSending: false,
     }
   }
 
   onSubmit(event){
     event.preventDefault();
+    this.setState({ isSending: true })
     const { sender, address, subject, text } = this.state
-    axios.get(`https://nodemails.herokuapp.com/send/${sender}/${address}/${subject}/${text}`)
+    axios.get(`${baseURL}${sender}/${address}/${subject}/${text}`)
     .then(response => {
       if(response.data.response === 'sent'){
-        this.setState({didSend: !this.state.didSend})
+        this.setState({ 
+          didSend: !this.state.didSend,
+          isSending: false,
+         })
       }
       else {
-        this.setState({ failedToSend: true })
+        this.setState({  didSend: false })
       }
 
     })
@@ -55,30 +62,41 @@ class Contact extends React.Component {
             name="sender" 
             onChange={this.onChange} 
             placeholder="Name"
-            required/>
+            required
+            autoComplete="off"/>
             <input 
             type="email" 
             name="address" 
             onChange={this.onChange} 
             placeholder="E-mail"
-            required/>
+            required
+            autoComplete="off"/>
             <input 
             type="text" 
             name="subject" 
             onChange={this.onChange} 
             placeholder="Subject"
-            required/>
+            required
+            autoComplete="off"/>
             <textarea 
             type="text" 
             name="text"
             onChange={this.onChange} 
             placeholder="Message"
-            required/>
-            {this.state.didSend
-              ? <button className="sent">sent!</button>
-              :(
-                <button>send</button>)
+            required
+            autoComplete="off"/>
+            <p style={{textAlign: 'center'}}>
+            {
+              this.state.didSend
+              ? <div className="mobile-status sent">Sent!</div>
+              : (this.state.isSending
+                ? <div className="sending-mobile">
+                    <ChasingDots size={15} color='orange'/>
+                  </div>
+                :<button>Send</button>
+                )
             }
+            </p>
           </form> 
           
           </div>
@@ -101,29 +119,36 @@ class Contact extends React.Component {
             name="sender" 
             onChange={this.onChange} 
             placeholder="Name"
-            required/>
+            required
+            autoComplete="off"/>
             <input 
             type="email" 
             name="address" 
             onChange={this.onChange} 
             placeholder="E-mail"
-            required/>
+            required
+            autoComplete="off"/>
             <input 
             type="text" 
             name="subject" 
             onChange={this.onChange} 
             placeholder="Subject"
-            required/>
+            required
+            autoComplete="off"/>
             <textarea 
             type="text" 
             name="text"
             onChange={this.onChange} 
             placeholder="Message"
-            required/>
-            {this.state.didSend
-              ? <button className="sent">sent!</button>
-              :(
-                <button>send</button>)
+            required
+            autoComplete="off"/>
+            {
+              this.state.didSend
+              ? <div className="status sent">Sent!</div>
+              : (this.state.isSending
+                ? <ChasingDots size={20} color='orange' className="sending" />
+                :<button>Send</button>
+                )
             }
           </form> 
           

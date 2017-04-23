@@ -23,11 +23,15 @@ class Photography extends React.Component {
     this.state = {
       imgIndex: 0,
       isLoading: true,
+      imgDidLeave: false,
 
     }
   }
   nextImg(val){
-    this.setState({ isLoading: !this.state.isLoading })
+    this.setState({ 
+      isLoading: !this.state.isLoading,
+      imgDidLeave: true
+      })
     if (val === 'next'){
       this.state.imgIndex === ImageArray.length - 1
       ? this.setState({ imgIndex: 0 })
@@ -59,7 +63,7 @@ class Photography extends React.Component {
                 this.state.isLoading
                 ? <div><div className="imgLoading"><div className="triangle"/></div></div>
                 : <Motion 
-                  defaultStyle={{x: 0.9, y: 0.25}} 
+                  defaultStyle={{x: 0.9, y: 0}} 
                   style={{x: spring(1, preset), y: spring(1, {stiffness: 75})}}>
                     {value =>{
                       const { x, y} = value;
@@ -67,7 +71,12 @@ class Photography extends React.Component {
                         transform: `scale(${x})`,
                         opacity: y
                       }
-                      return <img src={ImageArray[this.state.imgIndex]} style={style}  alt="" className="slideImg" onLoad={this.handleLoad}/>
+                      return <img 
+                      src={ImageArray[this.state.imgIndex]} 
+                      style={style}  
+                      alt="" 
+                      className="slideImg" 
+                      onLoad={this.handleLoad}/>
                      }
                     }
                   </Motion>

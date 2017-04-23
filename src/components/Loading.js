@@ -13,9 +13,9 @@ const Loading = () => {
   return(
     <div className="Loading-Container">
       <div className="Spin-Kit">
-        <DoubleBounce size={50} color='#E9E9E9' />
+        <DoubleBounce size={50} color='#EEEEEE' />
       </div>
-      <p >
+      <p style={{textAlign: 'center'}}>
           Loading
       </p>
     </div>

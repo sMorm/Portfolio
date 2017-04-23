@@ -4,7 +4,7 @@
 }
 
 .Spin-Kit {
-  width: 52px;
+  width: 43px;
   margin: 0 auto;
 }
 
@@ -15,4 +15,6 @@
   letter-spacing: 2px;
   text-align: center;
   width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
