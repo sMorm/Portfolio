@@ -1,6 +1,7 @@
 .mailContainer {
   background-color: white;
   width: 480px;
+  height: 220px;
   text-align: center;
   margin: 0 auto;
   margin-top: 50px;
@@ -67,6 +68,9 @@
 
 .mobile-status.sent {
   color: lightgreen;
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: -10px;
   text-align: center;
   animation: pullup 0.5s forwards;
 }
@@ -130,7 +134,6 @@
 .status {
   font-size: 20px;
   font-weight: 700;
-  float: right;
   margin-top: 10px;
   margin-right: -10px;
   border-radius: 5px;
@@ -138,15 +141,16 @@
 }
 .status.sent {
   color: lightgreen;
-  padding: 3px;
+  font-size: 50px;
+  margin-left: -10px;
   text-align: center;
   animation: pullup 0.5s forwards;
 }
 
 .sending {
-  float: right;
-  margin-top: 10px;
-  margin-right: 5px;
+  position: absolute;
+  margin-left: -35px;
+  margin-top: 50px;
 }
 
 

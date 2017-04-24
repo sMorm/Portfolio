@@ -73,7 +73,7 @@
   margin: 0 auto;
   padding: 10px 0px;
   font-size: 20px;
-  animation: dropdown 0.75s forwards;
+  animation: fadein 0.5s forwards;
 }
 
 .activeLink {

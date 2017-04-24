@@ -19,7 +19,7 @@ const About = () => {
       <h1>About Me</h1>
       <hr/>
       <p>Currently under construction. Meanwhile, check out some of my work in the portfolio portal.</p>
-      <Link to='/portfolio' className='tempLink'>To Portfolio 🏞</Link>
+      <Link to='/portfolio' className='tempLink'>To Portfolio</Link>
     </div>
     )
   }

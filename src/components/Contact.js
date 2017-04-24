@@ -55,49 +55,51 @@ class Contact extends React.Component {
         {matches => matches
           ? 
           <div className="mail-mobile" >
-          <h1>Message</h1>
-          <form onSubmit={this.onSubmit}>
-            <input 
-            type="text" 
-            name="sender" 
-            onChange={this.onChange} 
-            placeholder="Name"
-            required
-            autoComplete="off"/>
-            <input 
-            type="email" 
-            name="address" 
-            onChange={this.onChange} 
-            placeholder="E-mail"
-            required
-            autoComplete="off"/>
-            <input 
-            type="text" 
-            name="subject" 
-            onChange={this.onChange} 
-            placeholder="Subject"
-            required
-            autoComplete="off"/>
-            <textarea 
-            type="text" 
-            name="text"
-            onChange={this.onChange} 
-            placeholder="Message"
-            required
-            autoComplete="off"/>
-            <p style={{textAlign: 'center'}}>
-            {
-              this.state.didSend
-              ? <div className="mobile-status sent">Sent!</div>
-              : (this.state.isSending
-                ? <div className="sending-mobile">
-                    <ChasingDots size={15} color='orange'/>
-                  </div>
-                :<button>Send</button>
-                )
-            }
-            </p>
-          </form> 
+          {this.state.isSending ? <h1>Sending</h1> : <h1>Message</h1>}
+          {
+            this.state.didSend
+            ? <div className="mobile-status sent">Sent!</div>
+            : (this.state.isSending
+              ? <div className="sending-mobile">
+                  <ChasingDots size={25} color='orange'/>
+                </div>
+              :
+              <form onSubmit={this.onSubmit}>
+                <input 
+                type="text" 
+                name="sender" 
+                onChange={this.onChange} 
+                placeholder="Name"
+                required
+                autoComplete="off"/>
+                <input 
+                type="email" 
+                name="address" 
+                onChange={this.onChange} 
+                placeholder="E-mail"
+                required
+                autoComplete="off"/>
+                <input 
+                type="text" 
+                name="subject" 
+                onChange={this.onChange} 
+                placeholder="Subject"
+                required
+                autoComplete="off"/>
+                <textarea 
+                type="text" 
+                name="text"
+                onChange={this.onChange} 
+                placeholder="Message"
+                required
+                autoComplete="off"/>
+                <p style={{textAlign: 'center'}}>
+                <button>Send</button>
+                </p>
+              </form> 
+              )
+          }
+
           
           </div>
           : 
@@ -112,46 +114,46 @@ class Contact extends React.Component {
         return ( 
         <div style={style}>
           <div className="mailContainer" >
-          <h1>Message</h1>
-          <form onSubmit={this.onSubmit}>
-            <input 
-            type="text" 
-            name="sender" 
-            onChange={this.onChange} 
-            placeholder="Name"
-            required
-            autoComplete="off"/>
-            <input 
-            type="email" 
-            name="address" 
-            onChange={this.onChange} 
-            placeholder="E-mail"
-            required
-            autoComplete="off"/>
-            <input 
-            type="text" 
-            name="subject" 
-            onChange={this.onChange} 
-            placeholder="Subject"
-            required
-            autoComplete="off"/>
-            <textarea 
-            type="text" 
-            name="text"
-            onChange={this.onChange} 
-            placeholder="Message"
-            required
-            autoComplete="off"/>
+          {this.state.isSending ? <h1>Sending...</h1> : <h1>Message</h1>}
             {
               this.state.didSend
-              ? <div className="status sent">Sent!</div>
+              ? <div className="status sent">Successfully delivered message!</div>
               : (this.state.isSending
-                ? <ChasingDots size={20} color='orange' className="sending" />
-                :<button>Send</button>
+                ? <ChasingDots size={50} color='orange' className="sending" />
+                :
+                <form onSubmit={this.onSubmit}>
+                  <input 
+                  type="text" 
+                  name="sender" 
+                  onChange={this.onChange} 
+                  placeholder="Name"
+                  required
+                  autoComplete="off"/>
+                  <input 
+                  type="email" 
+                  name="address" 
+                  onChange={this.onChange} 
+                  placeholder="E-mail"
+                  required
+                  autoComplete="off"/>
+                  <input 
+                  type="text" 
+                  name="subject" 
+                  onChange={this.onChange} 
+                  placeholder="Subject"
+                  required
+                  autoComplete="off"/>
+                  <textarea 
+                  type="text" 
+                  name="text"
+                  onChange={this.onChange} 
+                  placeholder="Message"
+                  required
+                  autoComplete="off"/>
+                  <button>Send</button>
+                </form> 
                 )
             }
-          </form> 
-          
           </div>
           <Social/> 
         </div>
