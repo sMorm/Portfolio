@@ -1,6 +1,3 @@
-.homeContainer {
-/*  animation: fadein 0.75s forwards;
-*/}
 .profileContainer {
   background-color: white;
   margin: auto;
@@ -44,6 +41,7 @@
   color: black;
   letter-spacing: 1;
 }
+
 .textContainer {
   text-align: center;
   margin: 20px;
@@ -51,15 +49,4 @@
   font-weight: 200;
   color: #BBBBBB;
   letter-spacing: 0.5
-}
-
-
-@keyframes fadein {
-  from{transform: translateY(-2%); opacity: 0;}
-  to{transform: translateY(0%); opacity: 1;}
-}
-.cow {
-  background-color: salmon;
-  height: 100px;
-  width: 300px;
 }

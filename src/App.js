@@ -7,13 +7,13 @@ import {
 } from 'react-router-dom';
 
 // Components
-import Navigation from './components/Navigation';
-import Home from './components/Home';
-import Portfolio from './components/Portfolio';
-import Programming from'./components/Programming';
-import Photography from './components/Photography';
-import About  from './components/About';
-import Contact from './components/Contact';
+import Navigation from './components/Navigation.jsx';
+import Home from './components/Home.jsx';
+import Portfolio from './components/Portfolio.jsx';
+import Programming from'./components/Programming.jsx';
+import Photography from './components/Photography.jsx';
+import About  from './components/About.jsx';
+import Contact from './components/Contact.jsx';
 
 // Stylesheets
 import './components/styles/App.css'

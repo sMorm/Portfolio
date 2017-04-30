@@ -21,11 +21,13 @@
   -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
 }
+
 .mail-mobile h1{
   font-size: 30px;
   text-align: center;
   margin-top: 0px;
 }
+
 .mail-mobile input {
   display: block;
   border: none;
@@ -36,8 +38,8 @@
   text-align: center;
   border-radius: 0;
   border: solid 1px lightgrey;
-
 }
+
 .mail-mobile textarea {
   display: block;
   border: 0;
@@ -52,8 +54,11 @@
   font-family: sans-serif;
   border: solid 1px lightgrey;
 }
+
 .mail-mobile button {
   border: solid 1px lightgrey;
+  border-radius: 5px;
+  color: #999;
   background-color: white;
   width: 50px;
   height: 25px;
@@ -72,12 +77,14 @@
   font-size: 30px;
   margin-top: -10px;
   text-align: center;
-  animation: pullup 0.5s forwards;
+  animation: scale-up 0.5s forwards;
 }
+
 .mobile-status.sending {
   background-color: orange;
-  animation: pullup 0.5s forwards;
+  animation: scale-up 0.5s forwards;
 }
+
 .sending-mobile {
   width: 20px;
   height: 25px;
@@ -90,6 +97,7 @@
   color: black;
   letter-spacing: 1px;
 }
+
 .mailContainer input {
   display: block;
   width: 200px;
@@ -121,8 +129,8 @@
   margin-top: 10px;
   margin-right: -15px;
   color: grey;
-  border: solid 1px lightgrey;
   background-color: white;
+  border: solid 1px #DDD;
   border-radius: 5px;
   padding: 5px 15px;
   cursor: pointer;
@@ -131,6 +139,7 @@
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
 }
+
 .status {
   font-size: 20px;
   font-weight: 700;
@@ -139,25 +148,17 @@
   border-radius: 5px;
   color: white;
 }
+
 .status.sent {
   color: lightgreen;
   font-size: 50px;
   margin-left: -10px;
   text-align: center;
-  animation: pullup 0.5s forwards;
+  animation: scale-up 1s forwards;
 }
 
 .sending {
   position: absolute;
   margin-left: -35px;
   margin-top: 50px;
-}
-
-
-
-@keyframes pullup {
-  0% {transform: translateY(50%); opacity: 0;}
-  70% {transform: translateY(-55%); opacity: 1;}
-  90% {transform: translateY(10%); opacity: 1;}
-  100% {transform: translateY(0%); opacity: 1;}
 }

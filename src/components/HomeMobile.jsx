@@ -5,7 +5,7 @@ import React from 'react';
 import './styles/HomeMobile.css';
 
 // Components
-import Social from './Social';
+import Social from './Social.jsx';
 
 const profImg = 'http://i.imgur.com/quMB1Sh.png';
 

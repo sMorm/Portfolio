@@ -45,9 +45,7 @@ class Navigation extends React.Component {
                       <NavLink to="/contact" className="linkMobile">Contact</NavLink>
                     </div>
                   )
-                  : (
-                    ""
-                  )
+                  : null
                 }
               </div>
             </div>
@@ -71,7 +69,3 @@ class Navigation extends React.Component {
 
 
 export default Navigation;
-
-/*
-
-*/

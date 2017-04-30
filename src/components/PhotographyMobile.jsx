@@ -2,10 +2,6 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
 
-
-const preset = {stiffness: 150, damping: 10}
-
-
 // Media
 import ImageArray from './ImageArray'
 
@@ -43,26 +39,21 @@ class PhotographyMobile extends React.Component {
             <div className="slideContainer">
             <img src={ImageArray[this.state.imgIndex]} alt="" style={{height:1}} onLoad={this.handleLoad}/>
               <button onClick={() => this.nextImg('prev')} className="slideButton mobile">&lt;</button>
-              {
-                this.state.isLoading
-                ? <div><div className="imgLoading mobile"><div className="triangle mobile"/></div></div>
-                : <Motion 
-                  defaultStyle={{x: 0.9, y: 0.25}} 
-                  style={{x: spring(1, preset), y: spring(1, {stiffness: 75})}}>
+                 <Motion 
+                  defaultStyle={{x: 1.1, y: 0.25}} 
+                  style={{x: spring(1), y: spring(1, {stiffness: 75})}}>
                     {value =>{
                       const { x, y } = value;
                       let style = {
                         transform: `scale(${x})`,
-                        opacity: y
+                        opacity: y,
                       }
                       return <img src={ImageArray[this.state.imgIndex]} style={style}  alt="" className="slideImg mobile" onLoad={this.handleLoad}/>
                      }
                     }
                   </Motion>
-                }
               <button onClick={() => this.nextImg('next')} className="slideButton mobile">&gt;</button>
             </div>
-            <p className="vsco">See more at <a href='http://vsco.co/sereymorm'>vsco</a></p>
           </div>
     );
   }

@@ -35,7 +35,7 @@ const ProgrammingMobile = () => {
           <img src={poker} alt="option 1"/>
           <h1>Poker</h1>
           <p>A Poker game written in C++. Traversing through the remaining cards, the program will help the player make better decisions.</p>
-          <p>See on  <a href='https://github.com/sMorm/Mimic' className='linkStyle' target='_blank'>Github</a></p>
+          <p>See on  <a href='https://github.com/sMorm/Poker' className='linkStyle' target='_blank'>Github</a></p>
         </div>
       </div>
   )

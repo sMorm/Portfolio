@@ -6,8 +6,8 @@ import { Motion, spring } from 'react-motion';
 // Stylesheets
 import './styles/Home.css';
 
-import HomeMobile from './HomeMobile'
-import Social from './Social'
+import HomeMobile from './HomeMobile.jsx'
+import Social from './Social.jsx'
 
 const profIMG = 'http://i.imgur.com/quMB1Sh.png';
 
@@ -55,12 +55,11 @@ class Home extends React.Component {
           }
       </MediaQuery>
       )
-      }
     }
-    </Motion>
-      )
   }
-
+    </Motion>
+    )
+  }
 }
 
 

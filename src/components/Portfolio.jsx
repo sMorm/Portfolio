@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 import './styles/Portfolio.css'
 
 // Components
-import Loading from './Loading';
-import PortfolioMobile from './PortfolioMobile';
+import Loading from './Loading.jsx';
+import PortfolioMobile from './PortfolioMobile.jsx';
 
 
 // Media
@@ -34,8 +34,10 @@ class Portfolio extends React.Component {
   render(){
     return (
       <div>
-      <img src={Photography} alt="option 1" onLoad={this.isLoading} style={{width: 0.001}}/>
-      <img src={Photography} alt="option 1" onLoad={this.isLoading} style={{width: 0.001}}/>
+      <div style={{display: 'none'}}>
+        <img src={Photography} alt="option 1" onLoad={this.isLoading} />
+        <img src={Photography} alt="option 1" onLoad={this.isLoading} />
+      </div>
       <MediaQuery query="(max-width: 750px)">
         {matches => matches
           ? <PortfolioMobile />
@@ -50,7 +52,7 @@ class Portfolio extends React.Component {
             }
             return ( 
               <div style={style}>{
-                this.state.imgLoaded > 1 
+                this.state.imgLoaded > 1
                 ? (
                   <div className='portfolioContainer'>
                     <Link to='/portfolio/programming'>
@@ -73,16 +75,14 @@ class Portfolio extends React.Component {
                 : <Loading />
               }</div>
               )
+            }
           }
+          </Motion>
         }
-        </Motion>
-        }
-          </MediaQuery>
+      </MediaQuery>
       </div>
     );
   }
 }
-
-
 
 export default Portfolio;
