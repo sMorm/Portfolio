@@ -1,7 +1,6 @@
 .portfolioContainer {
   text-align: center;
   margin-top: 30px;
-  animation: fadein 0.75s forwards;
 }
 
 .optionContainer {
@@ -58,4 +57,24 @@
 .optionContainer.mobile p {
   font-size: 12px;
 }
+.blankTextContainer {
+ margin-top: 30px;
+}
+.blankLines {
+  height: 15px;
+  width: 80%;
+  margin: 15px 0px;
+  margin-left: 30px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.075);
+}
 
+.blankLines.end {
+  width: 50%;
+}
+
+.blankImg{
+  width: 300px;
+  height: 150px;
+  background-color: rgba(0,0,0,0.05);
+}

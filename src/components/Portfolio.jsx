@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 
 
 // Stylesheets
+import Skeleton from './Skeleton.jsx'
 import './styles/Portfolio.css'
 
 // Components
-import Loading from './Loading.jsx';
 import PortfolioMobile from './PortfolioMobile.jsx';
 
 
@@ -41,7 +41,7 @@ class Portfolio extends React.Component {
       <MediaQuery query="(max-width: 750px)">
         {matches => matches
           ? <PortfolioMobile />
-          : 
+          :(
           <Motion defaultStyle={{ x: 0, y: -20 }}
           style={{ x: spring(1), y: spring(0, {stiffness: 100, damping: 20})}}>
           {value => {
@@ -51,10 +51,10 @@ class Portfolio extends React.Component {
               opacity: x
             }
             return ( 
-              <div style={style}>{
+              <div>{
                 this.state.imgLoaded > 1
                 ? (
-                  <div className='portfolioContainer'>
+                  <div className='portfolioContainer' style={style}>
                     <Link to='/portfolio/programming'>
                       <div className="optionContainer">
                         <img src={Programming} alt="placeholder" onLoad={this.isLoading}/>
@@ -72,12 +72,13 @@ class Portfolio extends React.Component {
                     </Link>
                   </div>
                 )
-                : <Loading />
+                : <Skeleton />
               }</div>
               )
             }
           }
           </Motion>
+          )
         }
       </MediaQuery>
       </div>

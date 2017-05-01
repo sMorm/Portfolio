@@ -4,7 +4,7 @@ import MediaQuery from 'react-media';
 
 // Components
 import ProgrammingMobile from './ProgrammingMobile.jsx'
-import Loading from './Loading.jsx'
+import Skeleton from './Skeleton.jsx'
 
 // Media
 import ballot from '../media/project_1.png';
@@ -68,11 +68,14 @@ class Programming extends React.Component {
                 <p>A Poker game written in C++. Traversing through the remaining cards, the program will help the player make better decisions.</p>
                 <p>See on  <a href='https://github.com/sMorm/Poker' className='linkStyle' target='_blank'>Github</a></p>
               </div>
-
             </div>
           }
         </MediaQuery>
-        : <Loading />
+        : 
+        <div>
+          <Skeleton />
+          <Skeleton />
+        </div>
       }
 
       </div>
