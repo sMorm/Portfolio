@@ -1,12 +1,13 @@
 .bioContainer {
-  height: 400px;
-  width: 285px;
+  width: 100%;
+  max-width: 750px;
   border: solid 1px transparent;
   margin: 0 auto;
-  margin-top: 7vh;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  margin-top: 2vh;
+}
+
+.bioContainer.logos {
+  margin-top: 2vh;
 }
 
 .bioContainer hr {
@@ -15,18 +16,37 @@
 }
 
 .bioContainer h1 {
-  margin-left: 25px;
+  text-align: center;
+  font-size: 32px;
 }
 
 .bioContainer p {
   margin-top: 25px;
   margin-left: 25px;
   margin-right: 12px;
-  color: lightgrey;
-  font-size: 18px;
+  color: #BBB;
+  font-size: 20px;
   text-align: left;
 }
 
+.bioLogos {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-top: 2vh;
+}
+
+.bioLogos img {
+  width: 80%;
+  max-width: 90px;
+}
+
+.bioLogos a {
+  display: inline-block;
+  width: 17%;
+  height: 100%;
+  max-width: 90px;
+}
 .tempLink {
   display: block;
   width: 102px;
@@ -42,4 +62,12 @@
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.react-logo {
+  animation: rotate infinite 20s linear;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
 }
