@@ -1,55 +1,25 @@
 .slideContainer {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: 5vh;
-}
-
-.slideButton {
-  height: 50px;
-  width: 70px;
-  border: none;
-  background-color: transparent;
-  outline: none;
-  margin-top: 320px;
-  margin-left: 30px;
-  margin-right: 35px;
-  font-size: 30px;
-  font-weight: 500;
-  color: black;
-  cursor: pointer;
-}
-
-.slideButton.mobile {
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  font-weight: 500;
-  z-index: 1;
-  margin: 65% 0%;
-  margin-left: 10px;
-  margin-right: 20px;
   text-align: center;
-  color: #999999;
 }
 
-.slideImg {
-  height: 700px;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+.slideContainer img {
+  width: 20%;
+  padding: 2%;
+  max-width: 300px;
+  animation: fadein 1s forwards;
 }
 
-.slideImg.mobile {
-  height: 100%;
-  width: 90%;
+@media (max-width: 600px){
+  .slideContainer img {
+    width: 100%;
+  }
 }
 
-.imgLoading {
-  width: 467px;
-  height: 700px;
+@media (max-width: 800px){
+  .slideContainer img {
+    width: 80%;
+  }
 }
-
 
 .triangle {
   margin: 0 auto;
@@ -61,16 +31,11 @@
   border-color: transparent transparent #eeeeee transparent;
 }
 
-.triangle.mobile {
-  margin: 0 auto;
-  margin-top:60%;
-  border-width: 0 30px 50px 30px;
-}
-
 .vsco {
   margin: 5vh;
   text-align: center;
   color: #5A5A5A;
+  animation: fadein 1s forwards;
 }
 
 .vsco a {

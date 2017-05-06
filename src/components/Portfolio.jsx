@@ -1,17 +1,11 @@
 // Dependencies
 import React from 'react';
-import MediaQuery from 'react-media';
 import { Motion, spring } from 'react-motion';
 import { Link } from 'react-router-dom';
-
 
 // Stylesheets
 import Skeleton from './Skeleton.jsx'
 import './styles/Portfolio.css'
-
-// Components
-import PortfolioMobile from './PortfolioMobile.jsx';
-
 
 // Media
 import Photography from '../media/photography.png'
@@ -38,10 +32,6 @@ class Portfolio extends React.Component {
         <img src={Photography} alt="option 1" onLoad={this.isLoading} />
         <img src={Photography} alt="option 1" onLoad={this.isLoading} />
       </div>
-      <MediaQuery query="(max-width: 750px)">
-        {matches => matches
-          ? <PortfolioMobile />
-          :(
           <Motion defaultStyle={{ x: 0, y: -20 }}
           style={{ x: spring(1), y: spring(0, {stiffness: 100, damping: 20})}}>
           {value => {
@@ -78,9 +68,6 @@ class Portfolio extends React.Component {
             }
           }
           </Motion>
-          )
-        }
-      </MediaQuery>
       </div>
     );
   }

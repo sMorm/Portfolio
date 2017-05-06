@@ -58,58 +58,8 @@ class Contact extends React.Component {
 
   render(){
     return(
-      <MediaQuery query="(max-width: 750px)">
-        {matches => matches
-          ? 
-          <div className="mail-mobile" >
-          {this.state.isSending ? <h1>Sending</h1> : <h1>Message</h1>}
-          {
-            this.state.didSend
-            ? <div className="mobile-status sent">Sent!</div>
-            : (this.state.isSending
-              ? <div className="sending-mobile">
-                  <ChasingDots size={25} color='orange'/>
-                </div>
-              :
-              <form onSubmit={this.onSubmit}>
-                <input 
-                type="text" 
-                name="sender" 
-                onChange={this.onChange} 
-                placeholder="Name"
-                required
-                autoComplete="off"/>
-                <input 
-                type="email" 
-                name="address" 
-                onChange={this.onChange} 
-                placeholder="E-mail"
-                required
-                autoComplete="off"/>
-                <input 
-                type="text" 
-                name="subject" 
-                onChange={this.onChange} 
-                placeholder="Subject"
-                required
-                autoComplete="off"/>
-                <textarea 
-                type="text" 
-                name="text"
-                onChange={this.onChange} 
-                placeholder="Message"
-                required
-                autoComplete="off"/>
-                <p style={{textAlign: 'center'}}>
-                <button>Send</button>
-                </p>
-              </form> 
-            )
-          }
-          </div>
-          : 
           <Motion defaultStyle={{ x: 0, y: -20 }}
-          style={{ x: spring(1), y: spring(0, {stiffness: 100, damping: 10})}}>
+          style={{ x: spring(1), y: spring(0, {stiffness: 100, damping: 20})}}>
           {value => {
             const { x, y } = value;
             const style = {
@@ -119,7 +69,8 @@ class Contact extends React.Component {
             return ( 
             <div style={style}>
               <div className="mailContainer" >
-              {this.state.isSending ? <h1>Sending...</h1> : <h1>Message</h1>}
+              {this.state.isSending ? <h1>Sending...</h1> 
+                : this.state.didSend ? <div></div> : <h1>Message</h1> }
                 {
                   this.state.didSend
                   ? <div className="status sent">Successfully delivered message!</div>
@@ -138,8 +89,6 @@ class Contact extends React.Component {
           }
         }
         </Motion>
-      }
-      </MediaQuery>
     );
   }
 }

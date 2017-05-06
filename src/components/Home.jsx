@@ -1,12 +1,11 @@
 // Dependencies
 import React from 'react';
-import MediaQuery from 'react-media';
 import { Motion, spring } from 'react-motion';
 
 // Stylesheets
 import './styles/Home.css';
 
-import HomeMobile from './HomeMobile.jsx'
+// Components
 import Social from './Social.jsx'
 
 const profIMG = 'http://i.imgur.com/quMB1Sh.png';
@@ -36,24 +35,17 @@ class Home extends React.Component {
         opacity: x
       }
       return ( 
-      <MediaQuery query="(max-width: 750px)">
-        {matches => matches
-          ? <HomeMobile />
-          :  <div className="homeContainer" style={style}>
-              <div className='profileContainer'>
-                <div className='profileInfoStyle'>
-                    <img src={profIMG} className='picStyle' alt="Profile" onLoad={this.loaded}/>
-                    <h1 className='nameContainer'>Serey Morm</h1>
-                    <hr/>
-                    <p className='textContainer'>
-                      Web & Software Developer, Photographer, Traveler
-                    </p>
-                </div>
-              </div>
-            <Social />
-            </div>
-          }
-      </MediaQuery>
+        <div className="homeContainer" style={style}>
+          <div className='profileContainer'>
+            <img src={profIMG} alt="Profile" onLoad={this.loaded}/>
+            <h1>Serey Morm</h1>
+            <hr/>
+            <p>
+              Web & Software Developer, Photographer, Traveler
+            </p>
+          </div>
+        <Social />
+        </div>
       )
     }
   }

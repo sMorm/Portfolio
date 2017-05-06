@@ -6,95 +6,16 @@
   margin: 0 auto;
   margin-top: 50px;
   padding: 50px;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-}
-
-.mail-mobile {
-  width: 200px;
-  padding: 30px;
-  margin: 0 auto;
-  margin-top: 50px;
-  background-color: white;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-}
-
-.mail-mobile h1{
-  font-size: 30px;
-  text-align: center;
-  margin-top: 0px;
-}
-
-.mail-mobile input {
-  display: block;
-  border: none;
-  height: 20px;
-  margin: 0 auto;
-  margin-top: 10px;
-  width: 150px;
-  text-align: center;
-  border-radius: 0;
-  border: solid 1px lightgrey;
-}
-
-.mail-mobile textarea {
-  display: block;
-  border: 0;
-  margin: 0 auto;
-  margin-top: 10px;
-  height: 100px;
-  width: 150px;
-  text-align: center;
-  border-radius: 0;
-  resize: none;
-  font-size: 12px;
-  font-family: sans-serif;
-  border: solid 1px lightgrey;
-}
-
-.mail-mobile button {
-  border: solid 1px lightgrey;
-  border-radius: 5px;
-  color: #999;
-  background-color: white;
-  width: 50px;
-  height: 25px;
-}
-
-.mobile-status {
-  color: white;
-  text-align: center;
-  height: 25px;
-  margin: 0 auto;
-}
-
-.mobile-status.sent {
-  color: lightgreen;
-  font-weight: 700;
-  font-size: 30px;
-  margin-top: -10px;
-  text-align: center;
-  animation: scale-up 0.5s forwards;
-}
-
-.mobile-status.sending {
-  background-color: orange;
-  animation: scale-up 0.5s forwards;
-}
-
-.sending-mobile {
-  width: 20px;
-  height: 25px;
-  margin: 0 auto;
+  border-radius: 1%;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 }
 
 .mailContainer h1{
   font-size: 50px;
   margin-top: -20px;
-  color: black;
+  color: #444;
   letter-spacing: 1px;
 }
 
@@ -108,6 +29,9 @@
   font-weight: 300;
   text-align: center;
   border: solid 1px lightgrey;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .mailContainer textarea {
@@ -121,7 +45,12 @@
   font-weight: 300;
   font-family: helvetica;
   border: solid 1px lightgrey;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0px;
 }
+
 
 .mailContainer button {
   display: block;
@@ -135,9 +64,6 @@
   padding: 5px 15px;
   cursor: pointer;
   font-size: 15px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
 }
 
 .status {
@@ -153,6 +79,7 @@
   color: lightgreen;
   font-size: 50px;
   margin-left: -10px;
+  margin-top: 35px;
   text-align: center;
   animation: scale-up 1s forwards;
 }
@@ -161,4 +88,58 @@
   position: absolute;
   margin-left: -35px;
   margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+  .mailContainer {
+    padding: 20px;
+    width: 75%;
+    height: 360px;
+  }
+  .mailContainer h1 {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+  .mailContainer input {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 1px;
+    border-radius: 0px;
+    border: solid 1px #EEEEEE;
+  }
+  .mailContainer textarea {
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 10px;
+    border-color: #EEEEEE;
+  }
+
+  .mailContainer button {
+    float: none;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .status {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-right: -10px;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .status.sent {
+    font-size: 30px;
+    margin-top: 115px;
+
+  }
+
+  .sendingMobile {
+    color: red;
+  }
 }

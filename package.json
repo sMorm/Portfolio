@@ -12,7 +12,8 @@
     "react-motion": "^0.4.8",
     "react-router": "^4.1.0",
     "react-router-dom": "next",
-    "react-transition-group": "^1.1.1"
+    "react-transition-group": "^1.1.1",
+    "shuffle-array": "^1.0.1"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

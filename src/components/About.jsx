@@ -1,7 +1,7 @@
 // Dependencies
 import React from 'react';
 import { Motion, spring } from 'react-motion'
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 // Components
 import Social from './Social'
@@ -11,6 +11,7 @@ import './styles/About.css'
 import './styles/Keyframes.css'
 
 // Media
+//import brush from '../media/brush.svg'
 import HTML from '../media/html.png';
 import CSS from '../media/css.png';
 import RLOGO from '../media/react.svg'
@@ -27,7 +28,7 @@ import FCPX from '../media/FCPX.jpg'
 const About = () => {
   return(
     <Motion defaultStyle={{ x: 0, y: -5 }}
-    style={{ x: spring(1, {stiffness:100}), y: spring(1, {stiffness: 200, damping: 15})}}>
+    style={{ x: spring(1), y: spring(1, {stiffness: 100, damping: 20})}}>
       {value => {
         const { x, y } = value;
         const style = {
@@ -35,7 +36,7 @@ const About = () => {
           opacity: x
         }
         return (
-          <div style={style}>
+          <div style={style} className="aboutContainer">
             <div className="bioContainer">
               <h1>About Me</h1>
               <hr/>
@@ -45,6 +46,8 @@ const About = () => {
 
             <div className="bioContainer logos">
               <h1>Front-End</h1>
+              {//<img src={brush} className="brush"/>}
+              }
               <hr/>
                 <div className="bioLogos">
                   <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank">
