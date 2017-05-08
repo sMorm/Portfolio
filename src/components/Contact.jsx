@@ -2,7 +2,6 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
 import { ChasingDots } from 'better-react-spinkit';
-import MediaQuery from 'react-media';
 import axios from 'axios'
 
 // Components

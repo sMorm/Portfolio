@@ -37,9 +37,17 @@
   margin-right: 12px;
   color: #BBB;
   font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
   text-align: left;
 }
 
+@media (max-width: 600px) {
+  .bioContainer p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
 .bioLogos {
   display: flex;
   flex-wrap: nowrap;

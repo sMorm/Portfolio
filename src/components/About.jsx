@@ -40,8 +40,8 @@ const About = () => {
             <div className="bioContainer">
               <h1>About Me</h1>
               <hr/>
-              <p>A student, software/web developer, and photographer learning the full-stack to combine my passion for implementing clean interfaces and applications to better our lives.</p>
-              <p> Here are some libraries and languages I use for development: </p>
+              <p>Student, web/software developer, and photographer learning the full-stack to combine my passion for implementing clean interfaces and applications to better our lives.</p>
+              <p> Here are some libraries and languages I use in development: </p>
             </div>
 
             <div className="bioContainer logos">

@@ -1,24 +1,37 @@
+.photographyHeader {
+  text-align: center;
+  width: 85%;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadein 1.5s forwards;
+}
+
+.photographyHeader hr {
+  border: solid 0.5px #DDD;
+  width: 70%;
+}
+
+.photographyHeader p {
+  margin: auto;
+  margin-top: 10px;
+  color: #AAA;
+  line-height: 25px;
+  text-align: left;
+  letter-spacing: 0.5px
+}
+
 .slideContainer {
   text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .slideContainer img {
   width: 20%;
   padding: 2%;
+  min-width: 250px;
   max-width: 300px;
-  animation: fadein 1s forwards;
-}
-
-@media (max-width: 600px){
-  .slideContainer img {
-    width: 100%;
-  }
-}
-
-@media (max-width: 800px){
-  .slideContainer img {
-    width: 80%;
-  }
+  animation: fadein 2.5s forwards;
 }
 
 .triangle {
@@ -35,9 +48,17 @@
   margin: 5vh;
   text-align: center;
   color: #5A5A5A;
-  animation: fadein 1s forwards;
+  animation: fadein 1.5s forwards;
 }
 
 .vsco a {
   color: #5A5A5A;
+}
+
+@media (max-width: 500px){
+  .slideContainer img {
+    width: 100%;
+    max-width: none;
+    padding: 20px 0px;
+  }
 }

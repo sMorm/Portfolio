@@ -1,0 +1,9 @@
+.socialContainer {
+  text-align: center;
+}
+
+.socialContainer img {
+  height: 50px;
+  opacity: 0.4;
+  margin: 50px 35px;
+}

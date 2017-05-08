@@ -8,7 +8,7 @@ import './styles/Home.css';
 // Components
 import Social from './Social.jsx'
 
-const profIMG = 'http://i.imgur.com/quMB1Sh.png';
+import profIMG from '../media/profilePic.png'
 
 class Home extends React.Component {
   constructor(){

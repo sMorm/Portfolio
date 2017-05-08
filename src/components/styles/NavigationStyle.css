@@ -63,6 +63,7 @@
 .link {
   display: inline;
   font-size: 20px;
+  font-weight: 400;
   height: -10vh;
   color: black;
   margin: 0 50px;
@@ -96,5 +97,5 @@
 .mobilePlaceholder{
   top:0;
   width: 100%;
-  height: 20px;
+  height: 40px;
 }

@@ -26,6 +26,13 @@ class Programming extends React.Component {
   render(){
     return (
       <div>
+      <div className="photographyHeader">
+        <h1>Programming</h1>
+        <hr />
+        <p>These are some projects that I've been working on, follow the links to see the source code or demo.</p>
+
+        <p>For more technical information on the technology I use, see the About page!</p>
+      </div>
       <div style={{display: 'none'}}>
         <img src={ballot} alt="option 1" onLoad={this.isLoading}/>
         <img src={rest} alt="option 1" onLoad={this.isLoading}/>
@@ -39,7 +46,7 @@ class Programming extends React.Component {
           {matches => matches
             ? <ProgrammingMobile />
             :
-            <div className="portfolioContainer">
+            <div className="portfolioContainer programming">
 
               <div className="optionContainer">
                 <img src={ballot} alt="option 1" />

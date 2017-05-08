@@ -7,11 +7,8 @@
   margin: 20px 50px;
   display: inline-block;
   background-color: white;
-  height: 400px;
-  width: 300px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  height: 350px;
+  width: 250px;
   animation: scale-off 0.5s forwards;
 }
 
@@ -21,13 +18,13 @@
 
 .optionContainer img {
   background-color: grey;
-  width: 300px;
+  width: 250px;
 }
 
 .optionContainer h1 {
   text-align: left;
   font-family: sans-serif;
-  font-size: 35px;
+  font-size: 30px;
   margin-left: 20px;
   letter-spacing: 1px;
   color: black;
@@ -35,6 +32,7 @@
 
 .optionContainer p {
   text-align: left;
+  font-size: 16px;
   margin-top: 15px;
   margin-left: 20px;
   margin-right: 20px;
@@ -43,16 +41,18 @@
 
 @media (max-width: 600px){
   .optionContainer {
-    height: 280px;
-    width: 200px;
+    height: 320px;
+    width: 240px;
   }
   .optionContainer img {
-    width: 200px;
+    width: 240px;
   }
   .optionContainer h1 {
     font-size: 20px;
   }
   .optionContainer p{
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
   }
 }

@@ -6,6 +6,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+::selection {
+  background: #F1A664;
+  color: white;
+}
+
 .App {
   text-align: center;
 }

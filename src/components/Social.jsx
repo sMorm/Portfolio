@@ -1,32 +1,16 @@
 import React from 'react';
 
-const socialContainer = {
-  marginTop: 50,
-  marginBottom: 100,
-  display: 'flex',
-  justifyContent: 'center',
-}
-
-const logoSize = {
-  height: 50,
-  width: 50,
-  opacity: 0.40,
-  marginLeft: 30,
-  marginRight: 30
-}
-
-const linkStyle = {
-  cursor: 'pointer'
-}
-
+import Github from '../media/github.png'
+import Linkedin from '../media/linkedin.png'
+import './styles/Social.css'
 const Social = () => {
   return (
-    <div style={socialContainer}>
-      <a href='https://github.com/sMorm' target='_blank' style={{linkStyle}}>
-        <img src='http://i.imgur.com/l5WHWSX.png' style={logoSize} alt='GitHub'/>
+    <div className="socialContainer">
+      <a href='https://github.com/sMorm' target='_blank' >
+        <img src={Github}  alt='GitHub'/>
       </a>
       <a href='https://linkedin.com/in/sereymorm' target='_blank'>
-        <img src='http://i.imgur.com/T8paDf2.png' style={logoSize} alt='GitHub'/>
+        <img src={Linkedin}  alt='GitHub'/>
       </a>
     </div>
   );    
