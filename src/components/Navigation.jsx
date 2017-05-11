@@ -26,7 +26,7 @@ class Navigation extends React.Component {
   }
   render(){
     return (
-      <MediaQuery query="(max-width: 750px)">
+      <MediaQuery query="(max-width: 370px)">
         {matches => matches
           ? (
             <div>

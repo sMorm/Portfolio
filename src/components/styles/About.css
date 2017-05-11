@@ -23,6 +23,12 @@
   font-size: 32px;
 }
 
+@media (max-width: 800px) {
+  .bioContainer h1 {
+    font-size: 25px;
+  }
+}
+
 .brush {
   position: absolute;
   margin-top: -149px;

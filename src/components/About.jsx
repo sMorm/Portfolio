@@ -17,7 +17,7 @@ import CSS from '../media/css.png';
 import RLOGO from '../media/react.svg'
 import SKETCH from '../media/sketch.svg'
 
-import NODE from '../media/node.svg';
+import NODE from '../media/nodejs.jpg';
 import EXPRESS from'../media/express.svg';
 import CPP from '../media/cpp.svg'
 import JS from '../media/js.png'

@@ -11,6 +11,10 @@
   width: 70%;
 }
 
+.photographyHeader h1 {
+  font-size: 27px;
+  margin-top: 30px;
+}
 .photographyHeader p {
   margin: auto;
   margin-top: 10px;

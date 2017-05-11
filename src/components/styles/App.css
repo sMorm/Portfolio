@@ -1,16 +1,3 @@
-body {
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-}
-
-::selection {
-  background: #F1A664;
-  color: white;
-}
-
 .App {
   text-align: center;
 }
@@ -27,8 +14,3 @@ body {
   font-weight: 600;
   color: #999999;
 }
-
-
-/* FONTS */
-
-@import url('https://fonts.googleapis.com/css?family=Roboto');
