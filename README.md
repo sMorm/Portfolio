@@ -1,3 +1,3 @@
 # Portfolio
 
-[Click to navigate to site](www.sereymorm.com)
+[Click to navigate to site](http://sereymorm.com)
