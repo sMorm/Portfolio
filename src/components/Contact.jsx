@@ -5,8 +5,9 @@ import { ChasingDots } from 'better-react-spinkit';
 import axios from 'axios'
 
 // Components
-import Social from './Social.jsx'
-import MailForm from './MailForm.jsx'
+import ContactCard from './ContactCard.jsx';
+import MailForm from './MailForm.jsx';
+import Social from './Social.jsx';
 
 // Stylesheets
 import './styles/Contact.css'
@@ -67,6 +68,8 @@ class Contact extends React.Component {
             }
             return ( 
             <div style={style}>
+            {//<ContactCard />
+            }
               <div className="mailContainer" >
               {this.state.isSending ? <h1>Sending...</h1> 
                 : this.state.didSend ? <div></div> : <h1>Message</h1> }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" stroke="#FFFFFF" stroke-width="70">
+            <rect id="Rectangle-2" x="138" y="291" width="749" height="443" rx="46"></rect>
+            <path d="M169,578 L512.5,305 L856,578" id="Triangle" stroke-linecap="round" stroke-linejoin="round" transform="translate(512.500000, 441.500000) rotate(180.000000) translate(-512.500000, -441.500000) "></path>
+        </g>
+    </g>
+</svg>

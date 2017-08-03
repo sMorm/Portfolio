@@ -22,9 +22,10 @@ import EXPRESS from'../media/express.svg';
 import CPP from '../media/cpp.svg'
 import JS from '../media/js.png'
 
-import PHOTOSHOP from '../media/photoshop.svg'
-import LIGHTROOM from '../media/lightroom.svg'
-import FCPX from '../media/FCPX.jpg'
+import DOCKER from '../media/docker.png'
+import JENKINS from '../media/jenkins.png'
+import AWS from '../media/aws.png'
+import MYSQL from '../media/mysql.png'
 const About = () => {
   return(
     <Motion defaultStyle={{ x: 0, y: -5 }}
@@ -40,8 +41,8 @@ const About = () => {
             <div className="bioContainer">
               <h1>About Me</h1>
               <hr/>
-              <p>Student, web/software developer, and photographer learning the full-stack to combine my passion for implementing clean interfaces and applications to better our lives.</p>
-              <p> Here are some libraries and languages I use in development: </p>
+              <p>Student, web/software developer, and photographer learning the full-stack and CI/CD to combine my passion for developing applications, clean interfaces, and excellent user-experiences to create rich applications.</p>
+              <p> Here are some of the tools, libraries, & languages I use in development: </p>
             </div>
 
             <div className="bioContainer logos">
@@ -72,11 +73,11 @@ const About = () => {
                   <a href="https://www.javascript.com/" target="_blank">
                     <img src={JS} alt="js logo" />
                   </a>
-                  <a href="https://expressjs.com/" target="_blank">
-                    <img src={EXPRESS} alt="Express logo" />
-                  </a>
                   <a href="https://nodejs.org/" target="_blank">
                     <img src={NODE} alt="node logo" />
+                  </a>
+                  <a href="https://mysql.com/" target="_blank">
+                    <img src={MYSQL} alt="mysql logo"/>
                   </a>
                   <a href="http://www.cplusplus.com/" target="_blank">
                     <img src={CPP} alt="C++ logo" />
@@ -85,17 +86,17 @@ const About = () => {
             </div>
 
             <div className="bioContainer logos">
-              <h1>Other Tools</h1>
+              <h1>DevOps</h1>
               <hr/>
                 <div className="bioLogos">
-                <a href="http://www.adobe.com/products/photoshop.html" target="_blank">
-                  <img src={PHOTOSHOP} alt="Photoshop logo"/>
+                <a href="http://www.docker.com/" target="_blank">
+                  <img src={DOCKER} alt="Docker logo"/>
                 </a>
                 <a href="https://www.apple.com/final-cut-pro/" target="_blank">
-                  <img src={FCPX} alt="Final Cut Pro X logo"/>
+                  <img src={JENKINS} alt="Jenkins logo"/>
                 </a>
-                <a href="https://lightroom.adobe.com/" target="_blank">
-                  <img src={LIGHTROOM} alt="Lightroom logo"/>
+                <a href="https://aws.amazon.com/" target="_blank">
+                  <img src={AWS} alt="AWS logo"/>
                 </a>
                 </div>
             </div>

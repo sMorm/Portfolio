@@ -9,6 +9,7 @@
   background-color: white;
   height: 350px;
   width: 250px;
+  border: solid 0.5px #DDD;
   animation: scale-off 0.5s forwards;
 }
 

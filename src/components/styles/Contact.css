@@ -6,10 +6,11 @@
   margin: 0 auto;
   margin-top: 50px;
   padding: 50px;
-  border-radius: 1%;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  border: solid 1px #EAEAEA;
+  -webkit-box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.3);
 }
 
 .mailContainer h1{

@@ -25,12 +25,12 @@
 
 @keyframes scale-on {
   0% {transform: translateY(0%); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3); }
-  100% {transform: translateY(-0.2%); box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);}
+  100% {transform: translateY(-0.2%); box-shadow: 0px 15px 35px -15px rgba(0,0,0,0.3);}
 }
 
 @keyframes scale-off {
   0% {transform: translateY(-0.2%); box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);}
-  100% {transform: translateY(0%); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);}
+  100% {transform: translateY(0%); box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);}
 }
 
 @keyframes zoom-in {
