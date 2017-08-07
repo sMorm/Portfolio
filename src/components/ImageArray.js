@@ -11,4 +11,5 @@ import shuffle from 'shuffle-array';
 
 const imgArray = [img1, img2, img3, img4, img5, img6, img7, img8] 
 
-export default shuffle(imgArray);
+// export default shuffle(imgArray);
+export default imgArray;

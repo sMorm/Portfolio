@@ -6,6 +6,8 @@ import './styles/Photography.css'
 
 // Components
 import Loading from './Loading'
+import TestComponent from './TestComponent.jsx';
+
 // Media
 import ImageArray from './ImageArray'
 
@@ -34,6 +36,7 @@ class Photography extends React.Component {
           <hr />
           <p>Picking up the camera is a therapeutic way for me to relieve stress and provides another platform that allows me to create. Here are some of my favorite shots.</p>
         </div>
+        <TestComponent />
         {this.state.toLoad > 1 
           ? <Loading />
           : (
@@ -45,9 +48,9 @@ class Photography extends React.Component {
               <a target="_blank" href='http://instagram/sereymorm'>instagram</a>
             </p>
             {
-              ImageArray.map((item, index) => {
-                return <img src={item} key={index} alt=""/>
-              })
+              // ImageArray.map((item, index) => {
+              //   return <img src={item} key={index} alt=""/>
+              // })
             }
             </div>
           )

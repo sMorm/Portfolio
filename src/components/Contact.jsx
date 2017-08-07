@@ -5,7 +5,7 @@ import { ChasingDots } from 'better-react-spinkit';
 import axios from 'axios'
 
 // Components
-import ContactCard from './ContactCard.jsx';
+// import ContactCard from './ContactCard.jsx';
 import MailForm from './MailForm.jsx';
 import Social from './Social.jsx';
 
