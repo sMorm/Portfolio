@@ -9,7 +9,7 @@ import img7 from '../media/image8.jpg'
 import img8 from '../media/image9.jpg'
 import shuffle from 'shuffle-array';
 
-const imgArray = [img1, img2, img3, img4, img5, img6, img7, img8] 
+const imgArray = [ { src: img1 }, { src: img2 }, { src: img3 }, { src: img4 }, { src: img5 }, { src: img6 }, { src: img7 }, { src: img8 }] 
 
-// export default shuffle(imgArray);
-export default imgArray;
+export default shuffle(imgArray);
+// export default imgArray;

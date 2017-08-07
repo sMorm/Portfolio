@@ -8,8 +8,8 @@ class TestComponent extends React.Component {
   constructor(){
     super();
     this.state = {
-      lightboxIsOpen: true,
-      currentImage: 0
+      lightboxIsOpen: false,
+      currentImage: null
     }
     this.closeLightbox = this.closeLightbox.bind(this);
   }
@@ -18,10 +18,21 @@ class TestComponent extends React.Component {
       lightboxIsOpen: !this.state.lightboxIsOpen
     })
   }
+  gotoPrevious () {
+    this.setState({
+      currentImage: this.state.currentImage - 1,
+    });
+  }
+  gotoNext () {
+    this.setState({
+      currentImage: this.state.currentImage + 1,
+    });
+  }
   render(){
     return (
       <div>
       <Lightbox
+        currentImage={this.state.currentImage}
         images={[{ src: ImageArray[this.state.currentImage] }]}
         isOpen={this.state.lightboxIsOpen}
         onClose={this.closeLightbox}
