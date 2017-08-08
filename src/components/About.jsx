@@ -38,10 +38,8 @@ const About = () => {
         return (
           <div style={style} className="aboutContainer">
             <div className="bioContainer">
-              <h1>About Me</h1>
-              <hr/>
-              <p>Student, web/software developer, and photographer learning the full-stack and CI/CD to combine my passion for developing applications, clean interfaces, and excellent user-experiences to create rich applications.</p>
-              <p> Here are some of the tools, libraries, & languages I use in development: </p>
+              <p>Student, web/software developer, and photographer learning the full-stack to pave a career path where my passion for technology and visual arts can coexist.</p>
+              <p> Some of the tools I use in development: </p>
             </div>
 
             <div className="bioContainer logos">
@@ -88,13 +86,13 @@ const About = () => {
               <h1>DevOps</h1>
               <hr/>
                 <div className="bioLogos">
-                <a href="http://www.docker.com/" target="_blank">
+                <a href="https://www.docker.com/what-docker" target="_blank">
                   <img src={DOCKER} alt="Docker logo"/>
                 </a>
-                <a href="https://www.apple.com/final-cut-pro/" target="_blank">
+                <a href="https://jenkins.io" target="_blank">
                   <img src={JENKINS} alt="Jenkins logo"/>
                 </a>
-                <a href="https://aws.amazon.com/" target="_blank">
+                <a href="https://aws.amazon.com/what-is-aws/" target="_blank">
                   <img src={AWS} alt="AWS logo"/>
                 </a>
                 </div>

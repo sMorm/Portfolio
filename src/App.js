@@ -25,9 +25,7 @@ class App extends Component {
           <Navigation />
           <Switch>
             <Route exact path="/" component={ Home } />
-            <Route exact path="/portfolio" component={ Portfolio } />
-            <Route path="/portfolio/programming" component={ Programming } />
-            <Route path="/portfolio/photography" component={ Photography } />
+            <Route path="/photography" component={ Photography } />
             <Route path="/about" component={ About } />
             <Route path="/contact" component={ Contact } />
             <Route path="*" render={() => <h1>404 NOT FOUND</h1>} />
