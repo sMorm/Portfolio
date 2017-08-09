@@ -13,6 +13,9 @@
   animation: fadein 0.5s forwards;
 }
 
+.profileContainer.leave {
+  animation: fadeout 0.5s forwards;
+}
 .profileContainer img {
   display: block;
   margin: auto;

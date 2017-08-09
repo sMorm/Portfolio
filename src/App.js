@@ -9,8 +9,8 @@ import {
 // Components
 import Navigation from './components/Navigation.jsx';
 import Home from './components/Home.jsx';
-import Portfolio from './components/Portfolio.jsx';
-import Programming from'./components/Programming.jsx';
+// import Portfolio from './components/Portfolio.jsx';
+// import Programming from'./components/Programming.jsx';
 import Photography from './components/Photography.jsx';
 import About  from './components/About.jsx';
 import Contact from './components/Contact.jsx';

@@ -1,29 +1,81 @@
-
-import img1 from '../media/image1.jpg'
-import img2 from '../media/image2.jpg'
-import img3 from '../media/image3.jpg'
-import img4 from '../media/image4.jpg'
-import img5 from '../media/image5.jpg'
-import img6 from '../media/image6.jpg'
-import img7 from '../media/image7.jpg'
-import img8 from '../media/image8.jpg'
-import img9 from '../media/image9.jpg'
+//Other Dependencies
 import shuffle from 'shuffle-array';
 
+
+// Portraits
+import p1 from '../media/portrait1.jpg';
+import p2 from '../media/portrait2.jpg';
+import p3 from '../media/portrait3.jpg';
+import p4 from '../media/portrait4.jpg';
+import p5 from '../media/portrait5.jpg';
+import p6 from '../media/portrait6.jpg';
+import p7 from '../media/portrait7.jpg';
+import p8 from '../media/portrait8.jpg';
+import p9 from '../media/portrait9.jpg';
+
+// Architecture
+import l1 from '../media/landscape1.jpg';
+import l2 from '../media/landscape2.jpg';
+import l3 from '../media/landscape3.jpg';
+import l4 from '../media/landscape4.jpg';
+import l5 from '../media/landscape5.jpg';
+import l6 from '../media/landscape6.jpg';
+import l7 from '../media/landscape7.jpg';
+import l8 from '../media/landscape8.jpg';
+import l9 from '../media/landscape9.jpg';
+
+// Street
+import s1 from '../media/street1.jpg';
+import s2 from '../media/street2.jpg';
+import s3 from '../media/street3.jpg';
+import s4 from '../media/street4.jpg';
+import s5 from '../media/street5.jpg';
+import s6 from '../media/street6.jpg';
+import s7 from '../media/street7.jpg';
+import s8 from '../media/street8.jpg';
+import s9 from '../media/street9.jpg';
+import s13 from '../media/street13.jpg';
+import s11 from '../media/street11.jpg';
+import s12 from '../media/street12.jpg';
+
 const Portraits = [ 
-  { src: img2 }, 
-  { src: img3 }, 
-  { src: img4 }, 
-  { src: img5 }, 
-  { src: img6 }, 
-  { src: img7 }, 
-  { src: img8 }, 
-  { src: img9 }
+  { src: p1 }, 
+  { src: p2 }, 
+  { src: p3 }, 
+  { src: p4 }, 
+  { src: p5 }, 
+  { src: p6 },
+  { src: p7 },
+  { src: p8 },
+  { src: p9 }
 ] 
 
-const Landscapes = [
-  { src: img1 }
+const Architecture = [
+  { src: l2 },
+  { src: l1 },
+  { src: l3 },
+  { src: l5 },
+  { src: l4 },
+  { src: l6 },
+  { src: l7 },
+  { src: l8 },
+  { src: l9 },
 ]
+
+const Street = [ 
+  { src: s1 }, 
+  { src: s2 }, 
+  { src: s3 },
+  { src: s4 },
+  { src: s5 },
+  { src: s6 },
+  { src: s7 },
+  { src: s8 },
+  { src: s11},
+  { src: s9 },
+  { src: s13 },
+  { src: s12 }
+] 
 
 shuffle(Portraits)
 
@@ -82,5 +134,5 @@ const Theme = {
   },
 };
 
-export default { Portraits, Landscapes, Theme }
+export default { Portraits, Architecture, Street, Theme }
 // export default imgArray;

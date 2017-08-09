@@ -65,6 +65,10 @@
   max-width: 90px;
 }
 
+.bioLogos.social img {
+  width: 60%;
+}
+
 .bioLogos a {
   display: inline-block;
   width: 17%;

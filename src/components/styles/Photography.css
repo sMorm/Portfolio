@@ -11,6 +11,9 @@
   width: 70%;
 }
 
+.photographyHeader b {
+  display: inline;
+}
 .photographyHeader h1 {
   font-size: 27px;
   margin-top: 30px;
@@ -59,6 +62,7 @@
   padding: 20px 0px;
   border: solid;
   max-width: 800px;
+  animation: fadein 1.8s forwards;
 }
 
 .galleryGenre li {
@@ -90,12 +94,20 @@
 .vsco a {
   color: #5A5A5A;
 }
-
+@media (max-width: 800px){
+  .galleryImage {
+    margin: 30px 0px;
+  }
+  .galleryGenre{
+    border: none;
+    animation: fadein 1.8s forwards;
+  }
+}
 @media (max-width: 500px){
   .galleryContainer img {
     width: 100%;
     max-width: none;
-    padding: 20px 0px;
+    padding: 0px 0px;
   }
   .galleryGenre {
     font-size: 16px;

@@ -4,7 +4,7 @@ import { Motion, spring } from 'react-motion'
 //import { Link } from 'react-router-dom';
 
 // Components
-import Social from './Social'
+// import Social from './Social'
 
 // Stylesheets
 import './styles/About.css'
@@ -25,6 +25,11 @@ import DOCKER from '../media/docker.png'
 import JENKINS from '../media/jenkins.png'
 import AWS from '../media/aws.png'
 import MYSQL from '../media/mysql.png'
+
+import GITHUB from '../media/github.png'
+import LINKEDIN from '../media/linkedin.png'
+import STACKOVERFLOW from '../media/stackoverflow.png'
+
 const About = () => {
   return(
     <Motion defaultStyle={{ x: 0, y: -5 }}
@@ -97,8 +102,22 @@ const About = () => {
                 </a>
                 </div>
             </div>
+            <div className="bioContainer logos">
+              <h1>Social</h1>
+              <hr/>
+                <div className="bioLogos social">
+                <a href="https://github.com/sMorm" target="_blank">
+                  <img src={GITHUB} alt="Github logo"/>
+                </a>
+                <a href="https://www.linkedin.com/in/sereymorm" target="_blank">
+                  <img src={LINKEDIN} alt="LinkedIn logo"/>
+                </a>
+                <a href="https://stackoverflow.com/users/3411861/serey/" target="_blank">
+                  <img src={STACKOVERFLOW} alt="stackoverflow logo"/>
+                </a>
+                </div>
+            </div>
             <div style={{height: 20}} />
-            <Social />
           </div>
           );
         }

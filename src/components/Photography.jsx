@@ -101,10 +101,11 @@ class Photography extends React.Component {
         <div className="photographyHeader">
           <h1>Photography</h1>
           <hr />
-          <p>Picking up the camera is a therapeutic way for me to relieve stress and provides another platform that allows me to create. Here are some of my favorite shots.</p> 
+          <p><b>Visual Poetry </b>— that's how I would describe it. Picking up the camera allows me to unwind, express my creativity, and more importantly, it's always taking me to new places.</p> 
+          <p>Here's out some of my work . . .</p>
         </div>
         <p className="vsco">
-          See more at&nbsp;
+          Find me on&nbsp;
           <a target="_blank" href='http://vsco.co/sereymorm'>vsco</a>
           &nbsp;and&nbsp;
           <a target="_blank" href='http://instagram/sereymorm'>instagram</a>
@@ -112,7 +113,7 @@ class Photography extends React.Component {
         <ul className={"galleryGenre"}>
           <li onClick={() => this.gotoGenre("Portraits")}>Portraits</li>
           <li onClick={() => this.gotoGenre("Street")}>Street</li>
-          <li onClick={() => this.gotoGenre("Landscapes")}>Landscapes</li>
+          <li onClick={() => this.gotoGenre("Architecture")}>Architecture</li>
         </ul>
         {this.state.isLoading
           ? <Loading />

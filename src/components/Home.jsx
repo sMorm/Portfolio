@@ -13,9 +13,10 @@ import profIMG from '../media/profilePic.png'
 class Home extends React.Component {
   constructor(){
     super();
-    this.loaded = this.loaded.bind(this)
+    this.loaded = this.loaded.bind(this);
     this.state = {
-      isLoaded: false
+      isLoaded: false,
+      containerStyle: "profileContainer"
     }
   }
 
@@ -23,6 +24,11 @@ class Home extends React.Component {
     this.setState({
       isLoaded: true
     })
+  }
+
+  componentWillUnmount() {
+    this.setState({ containerStyle: "profileContainer leave"})
+    setTimeout(() => {return;}, 500)
   }
   render(){
     return (
@@ -37,7 +43,7 @@ class Home extends React.Component {
         }
         return ( 
           <div className="homeContainer" style={style}>
-            <div className='profileContainer'>
+            <div className={this.state.containerStyle}>
               <img src={profIMG} alt="Profile" onLoad={this.loaded}/>
               <h1>Serey Morm</h1>
               <p>Currently: Developer @ IFS Core</p>
