@@ -38,42 +38,36 @@
 
 .profileContainer p {
   text-align: center;
-  margin: 20px;
   font-size: 20px;
   font-weight: 200;
   color: #BBBBBB;
   letter-spacing: 0.5;
-  line-height: 0px;
+  width: 100%;
+  line-height: 5px;
 }
 
-@media (max-width: 640px) {
-  .profileContainer p {
-    font-size: 14px;
-  }
-}
 @media (max-width: 700px) {
   .profileContainer {
-    width: 75%;
+    width: 72%;
+    max-width: 255px;
     background-color: transparent;
     margin: 0 auto;
     margin-top: 10%;
     animation: fadein 1s forwards;
-    box-shadow: none;
-    height: 200px;
     border: none;
     border-radius: 0;
   }
 
   .profileContainer img {
-    width: 35%;
+    width: 40%;
   }
   .profileContainer h1 {
     font-size: 24px;
     letter-spacing: 1px;
   }
   .profileContainer p {
-    font-size: 17px;
-    margin: 10px;
+    font-size: 15px;
+    
   }
 }
 
