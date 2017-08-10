@@ -43,7 +43,7 @@ const About = () => {
         return (
           <div style={style} className="aboutContainer">
             <div className="bioContainer">
-              <p>Student, web/software developer, and photographer learning the full-stack to pave a career path where my passion for technology and visual arts can coexist.</p>
+              <p>Student, web/software developer, and photographer learning the full-stack to pave a career path where my passion for technology and visual arts are able to coexist.</p>
               <p> Some of the tools I use in development: </p>
             </div>
 

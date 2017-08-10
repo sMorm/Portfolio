@@ -96,6 +96,10 @@ const Theme = {
     ':hover': {
       opacity: 1,
     },
+    '@media (max-width: 800px)': {
+      opacity: 0.8,
+      backgroundColor: "transparent"
+    },
   },
   arrow__size__medium: {
     borderRadius: 40,
@@ -106,16 +110,37 @@ const Theme = {
       height: 70,
       padding: 15,
     },
+    '@media (max-width: 800px)': {
+        borderRadius: "30%"
+     },
   },
-  arrow__direction__left: { marginLeft: 10 },
-  arrow__direction__right: { marginRight: 10 },
+  arrow__direction__left: { 
+    marginLeft: 10,
+
+    '@media (max-width: 800px)': {
+        marginLeft: -20
+     },
+  },
+  arrow__direction__right: { 
+    marginRight: 10,
+
+    '@media (max-width: 800px)': {
+        marginRight: -20
+     },
+  },
   close: {
-    fill: '#D40000',
+    fill: '#FFA035',
     opacity: 0.6,
     transition: 'all 200ms',
     ':hover': {
       opacity: 1,
     },
+    '@media (max-width: 800px)': {
+        position: "relative",
+        marginTop: "40px",
+        marginRight: "0px",
+        backgroundColor: "rgba(255,255,255,0.3)"
+     },
   },
 
   // footer
@@ -130,7 +155,7 @@ const Theme = {
   thumbnail: {
   },
   thumbnail__active: {
-    boxShadow: '0 0 0 2px #00D8FF',
+    boxShadow: '0 0 0 2px #FFA035',
   },
 };
 

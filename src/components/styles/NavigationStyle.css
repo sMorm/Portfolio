@@ -69,6 +69,7 @@
   margin: 0 50px;
   padding: 20px 20px;
   text-decoration: none;
+  border-bottom: solid 2px transparent;
 }
 
 
@@ -85,7 +86,7 @@
 }
 
 .activeLink {
-  border-bottom: solid 2px black;
+  border-bottom: solid 2px #FFA035;
   animation: dropdown 0.2s forwards;
 }
 

@@ -101,7 +101,7 @@ class Photography extends React.Component {
         <div className="photographyHeader">
           <h1>Photography</h1>
           <hr />
-          <p><b>Visual Poetry </b>— that's how I would describe it. Picking up the camera allows me to unwind, express my creativity, and more importantly, it's always taking me to new places.</p> 
+          <p>Being able to create, whether it's an app, user-interface, or photo, I see it as visual poetry. It's brings pure joy to me when I'm able to create something so pleasing to the eyes simply out of nothing. </p> 
           <p>Here's out some of my work . . .</p>
         </div>
         <p className="vsco">
@@ -112,8 +112,8 @@ class Photography extends React.Component {
         </p>
         <ul className={"galleryGenre"}>
           <li onClick={() => this.gotoGenre("Portraits")}>Portraits</li>
-          <li onClick={() => this.gotoGenre("Street")}>Street</li>
           <li onClick={() => this.gotoGenre("Architecture")}>Architecture</li>
+          <li onClick={() => this.gotoGenre("Street")}>Street</li>
         </ul>
         {this.state.isLoading
           ? <Loading />

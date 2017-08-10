@@ -5,11 +5,8 @@
   width: 45%;
   max-width: 500px;
   border-radius: 1%;
-  border: solid 1px #CCC;
+  border: none;
   padding: 40px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
   animation: fadein 0.5s forwards;
 }
 
@@ -19,8 +16,8 @@
 .profileContainer img {
   display: block;
   margin: auto;
-  margin-top: 2vh;
-  width: 35%;
+  margin-top: 10px;
+  width: 30%;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
   -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
@@ -29,8 +26,8 @@
 .profileContainer h1 {
   text-align: center;
   margin-top: 17px;
-  color: black;
-  font-weight: 700;
+  color: #555;
+  font-weight: 300;
   letter-spacing: 2px;
 }
 
@@ -42,24 +39,29 @@
 .profileContainer p {
   text-align: center;
   margin: 20px;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 200;
   color: #BBBBBB;
   letter-spacing: 0.5;
   line-height: 0px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 640px) {
+  .profileContainer p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 700px) {
   .profileContainer {
-    width: 80%;
-    max-width: 400px;
+    width: 75%;
     background-color: transparent;
-    border: none;
     margin: 0 auto;
     margin-top: 10%;
     animation: fadein 1s forwards;
     box-shadow: none;
     height: 200px;
+    border: none;
+    border-radius: 0;
   }
 
   .profileContainer img {
@@ -70,7 +72,9 @@
     letter-spacing: 1px;
   }
   .profileContainer p {
-    font-size: 18px;
-    line-height: 0px;
+    font-size: 17px;
+    margin: 10px;
   }
 }
+
+

@@ -1,3 +1,10 @@
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
 .mailContainer {
   background-color: white;
   width: 480px;
@@ -8,15 +15,15 @@
   padding: 50px;
   border-radius: 5px;
   border: solid 1px #EAEAEA;
-  -webkit-box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.3);
-  box-shadow: 0px 10px 27px -12px rgba(0,0,0,0.3);
+  outline-width: 0;
 }
 
 .mailContainer h1{
-  font-size: 40px;
+  font-size: 35px;
+  padding: 5px;
+  font-weight: 100;
   margin-top: -20px;
-  color: black;
+  color: #BBB;
   letter-spacing: 1px;
 }
 
@@ -29,7 +36,7 @@
   font-size: 14px;
   font-weight: 300;
   text-align: center;
-  border: solid 1px lightgrey;
+  border-bottom: solid 1px lightgrey;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -45,7 +52,7 @@
   font-size: 14px;
   font-weight: 300;
   font-family: helvetica;
-  border: solid 1px lightgrey;
+  border: 1px solid rgb(240,240,240);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -65,6 +72,14 @@
   padding: 5px 15px;
   cursor: pointer;
   font-size: 15px;
+  transition: all 200ms;
+
+}
+
+.mailContainer button:hover {
+    background-color: #FFA035;
+    color: white;
+    border-color: transparent;
 }
 
 .status {
@@ -96,6 +111,7 @@
     padding: 20px;
     width: 75%;
     height: 360px;
+    box-shadow: none;
   }
   .mailContainer h1 {
     font-size: 30px;
@@ -108,7 +124,8 @@
     margin-top: 10px;
     padding: 1px;
     border-radius: 0px;
-    border: solid 1px #EEEEEE;
+    border: none;
+    border-bottom: solid 1px #EEEEEE;
   }
   .mailContainer textarea {
     position: relative;

@@ -46,7 +46,7 @@ class Home extends React.Component {
             <div className={this.state.containerStyle}>
               <img src={profIMG} alt="Profile" onLoad={this.loaded}/>
               <h1>Serey Morm</h1>
-              <p>Currently: Developer @ IFS Core</p>
+              <p>Currently - Developer @ IFS Core</p>
             </div>
           </div>
         )

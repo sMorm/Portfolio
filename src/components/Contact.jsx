@@ -75,7 +75,7 @@ class Contact extends React.Component {
                 : this.state.didSend ? <div></div> : <h1>Message</h1> }
                 {
                   this.state.didSend
-                  ? <div className="status sent">Successfully delivered message!</div>
+                  ? <div className="status sent">Message Delivered</div>
                   : (this.state.isSending
                     ? <ChasingDots size={50} color='orange' className="sending" />
                     : <MailForm 
