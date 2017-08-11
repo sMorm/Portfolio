@@ -9,8 +9,8 @@ import {
 // Components
 import Navigation from './components/Navigation.jsx';
 import Home from './components/Home.jsx';
-import Portfolio from './components/Portfolio.jsx';
-import Programming from'./components/Programming.jsx';
+// import Portfolio from './components/Portfolio.jsx';
+// import Programming from'./components/Programming.jsx';
 import Photography from './components/Photography.jsx';
 import About  from './components/About.jsx';
 import Contact from './components/Contact.jsx';
@@ -25,9 +25,7 @@ class App extends Component {
           <Navigation />
           <Switch>
             <Route exact path="/" component={ Home } />
-            <Route exact path="/portfolio" component={ Portfolio } />
-            <Route path="/portfolio/programming" component={ Programming } />
-            <Route path="/portfolio/photography" component={ Photography } />
+            <Route path="/photography" component={ Photography } />
             <Route path="/about" component={ About } />
             <Route path="/contact" component={ Contact } />
             <Route path="*" render={() => <h1>404 NOT FOUND</h1>} />

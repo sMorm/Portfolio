@@ -26,7 +26,7 @@ class Navigation extends React.Component {
   }
   render(){
     return (
-      <MediaQuery query="(max-width: 370px)">
+      <MediaQuery query="(max-width: 300px)">
         {matches => matches
           ? (
             <div>
@@ -40,8 +40,7 @@ class Navigation extends React.Component {
                     <div onClick={this.navClick} className="linkContainer">
                     <hr/>
                       <NavLink to="/" className="linkMobile">Home</NavLink>
-                      <NavLink to="/portfolio" className="linkMobile">Portfolio</NavLink>
-                      <NavLink to="/about" className="linkMobile">About</NavLink>
+                      <NavLink to="/photography" className="linkMobile">Portfolio</NavLink>
                       <NavLink to="/contact" className="linkMobile">Contact</NavLink>
                     </div>
                   )
@@ -55,8 +54,7 @@ class Navigation extends React.Component {
             <div className="placeholder"/>
               <div className="navContainer">
                 <NavLink exact activeClassName="activeLink" to="/" className="link" >Home</NavLink>
-                <NavLink activeClassName="activeLink" to="/portfolio" className="link">Portfolio</NavLink>
-                <NavLink activeClassName="activeLink" to="/about" className="link">About</NavLink>
+                <NavLink activeClassName="activeLink" to="/photography" className="link">Portfolio</NavLink>
                 <NavLink activeClassName="activeLink" to="/contact" className="link">Contact</NavLink>
               </div>
             </div>

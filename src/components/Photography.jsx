@@ -9,7 +9,7 @@ import './styles/Photography.css'
 import Loading from './Loading'
 
 // Media
-import ImageArray from './ImageArray'
+import GalleryHelper from './GalleryHelper'
 
 class Photography extends React.Component {
   constructor() {
@@ -20,132 +20,121 @@ class Photography extends React.Component {
     this.closeLightbox = this.closeLightbox.bind(this);
     this.gotoPrevious = this.gotoPrevious.bind(this);
     this.gotoNext = this.gotoNext.bind(this);
+    this.gotoImage = this.gotoImage.bind(this);
+    this.gotoGenre = this.gotoGenre.bind(this);
     this.state = {
-      toLoad: ImageArray.length,
       currentImage: 0,
-      lightboxIsOpen: false
+      lightboxIsOpen: false,
+      currentGenre: "Portraits",
+      isLoading: true,
+      isLeaving: "galleryImage",
+      toLoad: GalleryHelper["Portraits"].length,
     }
   }
 
   handleLoad() {
     this.setState({ toLoad: this.state.toLoad - 1})
+
+    if (this.state.toLoad === 0) return;
+
+    this.setState({ isLoading: false, isLeaving: "galleryImage enter" })
   }
+
   handleClickImage() {
-    if (this.state.currentImage === ImageArray.length - 1) return;
+    if (this.state.currentImage === GalleryHelper.length - 1) return;
 
     this.gotoNext();
   }
+
   openLightbox(index) {
     this.setState({
       lightboxIsOpen: true,
       currentImage: index
     })
   }
-  closeLightbox(){
-    this.setState({
-      lightboxIsOpen: false
-    })
+
+  closeLightbox() {
+    this.setState({ lightboxIsOpen: false })
   }
-  gotoPrevious(){
-    this.setState({
-      currentImage: this.state.currentImage - 1
-    })
+
+  gotoPrevious() {
+    this.setState({ currentImage: this.state.currentImage - 1 })
   }
-  gotoNext(){
-    this.setState({
-      currentImage: this.state.currentImage + 1 
-    })
+
+  gotoNext() {
+    this.setState({ currentImage: this.state.currentImage + 1 })
   }
+
+  gotoImage(index) {
+    this.setState({ currentImage: index });
+  }
+
+  gotoGenre(genre) {
+    if (genre === this.state.currentGenre) return;
+    this.setState({ 
+      isLeaving: "galleryImage leave",
+    });
+    setTimeout(() => {
+      this.setState({ 
+        isLoading: true
+      })
+    }, 500)
+    setTimeout(() => {
+      this.setState({ 
+        currentGenre: genre,
+        toLoad: GalleryHelper[genre].length
+      })
+    }, 1000)
+  }
+
   render(){
-    const theme = {
-  // container
-  container: {
-    background: 'rgba(255, 255, 255, 0.9)',
-  },
 
-  // arrows
-  arrow: {
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    fill: '#222',
-    opacity: 0.6,
-    transition: 'opacity 200ms',
+    let currentGenre = GalleryHelper[this.state.currentGenre];
 
-    ':hover': {
-      opacity: 1,
-    },
-  },
-  arrow__size__medium: {
-    borderRadius: 40,
-    height: 40,
-    marginTop: -20,
-
-    '@media (min-width: 768px)': {
-      height: 70,
-      padding: 15,
-    },
-  },
-  arrow__direction__left: { marginLeft: 10 },
-  arrow__direction__right: { marginRight: 10 },
-  close: {
-    fill: '#D40000',
-    opacity: 0.6,
-    transition: 'all 200ms',
-    ':hover': {
-      opacity: 1,
-    },
-  },
-
-  // footer
-  footer: {
-    color: 'black',
-  },
-  footerCount: {
-    color: 'rgba(0, 0, 0, 0.6)',
-  },
-
-  // thumbnails
-  thumbnail: {
-  },
-  thumbnail__active: {
-    boxShadow: '0 0 0 2px #00D8FF',
-  },
-};
     return (
       <div>
         {
-          ImageArray.map((item, index) => {
+          currentGenre.map((item, index) => {
             return <img src={item.src} key={index} alt="" onLoad={this.handleLoad} style={{display: 'none'}}/>
           })
         }
         <div className="photographyHeader">
           <h1>Photography</h1>
           <hr />
-          <p>Picking up the camera is a therapeutic way for me to relieve stress and provides another platform that allows me to create. Here are some of my favorite shots.</p>
+          <p>Being able to create, whether it's an app, user-interface, or photo, I see it as visual poetry. It's brings pure joy to me when I'm able to create something so pleasing to the eyes simply out of nothing. </p> 
+          <p>Here's out some of my work . . .</p>
         </div>
-        {this.state.toLoad > 1 
+        <p className="vsco">
+          Find me on&nbsp;
+          <a target="_blank" href='http://vsco.co/sereymorm'>vsco</a>
+          &nbsp;and&nbsp;
+          <a target="_blank" href='http://instagram/sereymorm'>instagram</a>
+        </p>
+        <ul className={"galleryGenre"}>
+          <li onClick={() => this.gotoGenre("Portraits")}>Portraits</li>
+          <li onClick={() => this.gotoGenre("Architecture")}>Architecture</li>
+          <li onClick={() => this.gotoGenre("Street")}>Street</li>
+        </ul>
+        {this.state.isLoading
           ? <Loading />
           : (
-            <div className="slideContainer">
-            <p className="vsco">
-              See more at&nbsp;
-              <a target="_blank" href='http://vsco.co/sereymorm'>vsco</a>
-              &nbsp;and&nbsp;
-              <a target="_blank" href='http://instagram/sereymorm'>instagram</a>
-            </p>
+            <div className="galleryContainer">
             {
-              ImageArray.map((item, index) => {
-                return <img src={item.src} key={index} alt="" onClick={() => this.openLightbox(index) }/>
+              currentGenre.map((item, index) => {
+                return <img className={this.state.isLeaving} src={item.src} key={index} alt="" onClick={() => this.openLightbox(index) }/>
               })
             }
             <Lightbox 
-              images={ImageArray}
+              images={currentGenre}
               currentImage={this.state.currentImage}
               onClickImage={this.handleClickImage}
               isOpen={this.state.lightboxIsOpen}
               onClose={this.closeLightbox}
               onClickNext={this.gotoNext}
               onClickPrev={this.gotoPrevious}
-              theme={theme}
+              onClickThumbnail={this.gotoImage}
+              showThumbnails={true}
+              theme={GalleryHelper.Theme}
              />
             </div>
           )

@@ -2,11 +2,10 @@
   margin-top: -10px;
 }
 .bioContainer {
-  width: 100%;
+  width: 95%;
   max-width: 750px;
   border: solid 1px transparent;
   margin: 0 auto;
-  margin-top: 2vh;
 }
 
 .bioContainer.logos {
@@ -21,6 +20,7 @@
 .bioContainer h1 {
   text-align: center;
   font-size: 32px;
+  font-weight: 300;
 }
 
 @media (max-width: 800px) {
@@ -64,6 +64,11 @@
 .bioLogos img {
   width: 80%;
   max-width: 90px;
+}
+
+.bioLogos.social img {
+  width: 60%;
+  margin-left: 15%;
 }
 
 .bioLogos a {

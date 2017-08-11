@@ -35,7 +35,8 @@ class Contact extends React.Component {
     event.preventDefault();
     this.setState({ isSending: true })
     const { sender, address, subject, text } = this.state
-    axios.get(`${baseURL}${sender}/${address}/${subject}/${text}`)
+    let newText = text.replace(/\r?\n/g,'<br %2F>');
+    axios.get(`${baseURL}${sender}/${address}/${subject}/${newText}`)
     .then(response => {
       if(response.data.response === 'sent'){
         this.setState({ 
@@ -68,14 +69,12 @@ class Contact extends React.Component {
             }
             return ( 
             <div style={style}>
-            {//<ContactCard />
-            }
               <div className="mailContainer" >
               {this.state.isSending ? <h1>Sending...</h1> 
                 : this.state.didSend ? <div></div> : <h1>Message</h1> }
                 {
                   this.state.didSend
-                  ? <div className="status sent">Successfully delivered message!</div>
+                  ? <div className="status sent">Message Delivered<hr/></div>
                   : (this.state.isSending
                     ? <ChasingDots size={50} color='orange' className="sending" />
                     : <MailForm 

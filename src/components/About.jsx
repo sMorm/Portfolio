@@ -4,7 +4,7 @@ import { Motion, spring } from 'react-motion'
 //import { Link } from 'react-router-dom';
 
 // Components
-import Social from './Social'
+// import Social from './Social'
 
 // Stylesheets
 import './styles/About.css'
@@ -25,6 +25,11 @@ import DOCKER from '../media/docker.png'
 import JENKINS from '../media/jenkins.png'
 import AWS from '../media/aws.png'
 import MYSQL from '../media/mysql.png'
+
+import GITHUB from '../media/github.png'
+import LINKEDIN from '../media/linkedin.png'
+import STACKOVERFLOW from '../media/stackoverflow.png'
+
 const About = () => {
   return(
     <Motion defaultStyle={{ x: 0, y: -5 }}
@@ -38,10 +43,8 @@ const About = () => {
         return (
           <div style={style} className="aboutContainer">
             <div className="bioContainer">
-              <h1>About Me</h1>
-              <hr/>
-              <p>Student, web/software developer, and photographer learning the full-stack and CI/CD to combine my passion for developing applications, clean interfaces, and excellent user-experiences to create rich applications.</p>
-              <p> Here are some of the tools, libraries, & languages I use in development: </p>
+              <p>Student, web/software developer, and photographer learning the full-stack to pave a career path where my passion for technology and visual arts are able to coexist.</p>
+              <p> Some of the tools I use in development: </p>
             </div>
 
             <div className="bioContainer logos">
@@ -88,19 +91,33 @@ const About = () => {
               <h1>DevOps</h1>
               <hr/>
                 <div className="bioLogos">
-                <a href="http://www.docker.com/" target="_blank">
+                <a href="https://www.docker.com/what-docker" target="_blank">
                   <img src={DOCKER} alt="Docker logo"/>
                 </a>
-                <a href="https://www.apple.com/final-cut-pro/" target="_blank">
+                <a href="https://jenkins.io" target="_blank">
                   <img src={JENKINS} alt="Jenkins logo"/>
                 </a>
-                <a href="https://aws.amazon.com/" target="_blank">
+                <a href="https://aws.amazon.com/what-is-aws/" target="_blank">
                   <img src={AWS} alt="AWS logo"/>
                 </a>
                 </div>
             </div>
+            <div className="bioContainer logos">
+              <h1>Social</h1>
+              <hr/>
+                <div className="bioLogos social">
+                <a href="https://github.com/sMorm" target="_blank">
+                  <img src={GITHUB} alt="Github logo"/>
+                </a>
+                <a href="https://www.linkedin.com/in/sereymorm" target="_blank">
+                  <img src={LINKEDIN} alt="LinkedIn logo"/>
+                </a>
+                <a href="https://stackoverflow.com/users/3411861/serey/" target="_blank">
+                  <img src={STACKOVERFLOW} alt="stackoverflow logo"/>
+                </a>
+                </div>
+            </div>
             <div style={{height: 20}} />
-            <Social />
           </div>
           );
         }

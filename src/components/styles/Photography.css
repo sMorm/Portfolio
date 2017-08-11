@@ -11,8 +11,12 @@
   width: 70%;
 }
 
+.photographyHeader b {
+  display: inline;
+}
 .photographyHeader h1 {
-  font-size: 27px;
+  font-size: 30px;
+  font-weight: 300;
   margin-top: 30px;
 }
 .photographyHeader p {
@@ -21,23 +25,59 @@
   color: #AAA;
   line-height: 25px;
   text-align: left;
-  letter-spacing: 0.5px
+  letter-spacing: 0.5px;
+  font-weight: 300;
 }
 
-.slideContainer {
+.galleryContainer {
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.slideContainer img {
+.galleryImage {
   width: 20%;
-  padding: 2%;
+  margin: 2%;
   min-width: 250px;
   max-width: 300px;
-  animation: fadein 2.5s forwards;
+  cursor: pointer;
+  animation: fadein 1.5s forwards;
 }
 
+.galleryImage.enter {
+  animation: fadein 1.5s forwards;
+}
+
+.galleryImage.leave {
+  animation: fadeout 0.5s forwards;
+}
+
+.galleryGenre {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgb(50,50,50);
+  margin: auto;
+  padding: 20px 0px;
+  border: solid 1px #FFA035;
+  max-width: 800px;
+  animation: fadein 1.8s forwards;
+}
+
+.galleryGenre li {
+  border-bottom: solid 1px white;
+  animation: fadein 1.5s forwards;
+  cursor: crosshair;
+  font-weight: 300;
+}
+
+.galleryGenre li:hover {
+  border-bottom: solid 1px rgb(220,220,220);
+}
+/*
 .triangle {
   margin: 0 auto;
   margin-top: 60%;
@@ -47,9 +87,9 @@
   border-width: 0 50px 80px 50px;
   border-color: transparent transparent #eeeeee transparent;
 }
-
+*/
 .vsco {
-  margin: 5vh;
+  margin: 20px;
   text-align: center;
   color: #5A5A5A;
   animation: fadein 1.5s forwards;
@@ -58,11 +98,30 @@
 .vsco a {
   color: #5A5A5A;
 }
-
+@media (max-width: 800px){
+  .photographyHeader {
+    width: 90%;
+  }
+  .galleryImage {
+    margin: 30px 0px;
+  }
+  .galleryGenre{
+    border: none;
+    animation: fadein 1.8s forwards;
+  }
+}
 @media (max-width: 500px){
-  .slideContainer img {
+  .galleryContainer img {
     width: 100%;
     max-width: none;
-    padding: 20px 0px;
+    padding: 0px 0px;
+  }
+  .galleryGenre {
+    font-size: 16px;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .galleryGenre li {
+    font-weight: 500;
   }
 }
