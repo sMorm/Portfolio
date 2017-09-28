@@ -12,27 +12,16 @@ import Loading from './Loading'
 import GalleryHelper from './GalleryHelper'
 
 class Photography extends React.Component {
-  constructor() {
-    super();
-    this.handleLoad = this.handleLoad.bind(this);
-    this.handleClickImage = this.handleClickImage.bind(this);
-    this.openLightbox = this.openLightbox.bind(this);
-    this.closeLightbox = this.closeLightbox.bind(this);
-    this.gotoPrevious = this.gotoPrevious.bind(this);
-    this.gotoNext = this.gotoNext.bind(this);
-    this.gotoImage = this.gotoImage.bind(this);
-    this.gotoGenre = this.gotoGenre.bind(this);
-    this.state = {
+  state = {
       currentImage: 0,
       lightboxIsOpen: false,
       currentGenre: "Portraits",
       isLoading: true,
       isLeaving: "galleryImage",
       toLoad: GalleryHelper["Portraits"].length,
-    }
   }
 
-  handleLoad() {
+  handleLoad = () => {
     this.setState({ toLoad: this.state.toLoad - 1})
 
     if (this.state.toLoad === 0) return;
@@ -40,36 +29,35 @@ class Photography extends React.Component {
     this.setState({ isLoading: false, isLeaving: "galleryImage enter" })
   }
 
-  handleClickImage() {
+  handleClickImage = () => {
     if (this.state.currentImage === GalleryHelper.length - 1) return;
-
     this.gotoNext();
   }
 
-  openLightbox(index) {
+  openLightbox = (index) => {
     this.setState({
       lightboxIsOpen: true,
       currentImage: index
     })
   }
 
-  closeLightbox() {
+  closeLightbox = () => {
     this.setState({ lightboxIsOpen: false })
   }
 
-  gotoPrevious() {
+  gotoPrevious = () => {
     this.setState({ currentImage: this.state.currentImage - 1 })
   }
 
-  gotoNext() {
+  gotoNext = () => {
     this.setState({ currentImage: this.state.currentImage + 1 })
   }
 
-  gotoImage(index) {
+  gotoImage = (index) => {
     this.setState({ currentImage: index });
   }
 
-  gotoGenre(genre) {
+  gotoGenre = (genre) => {
     if (genre === this.state.currentGenre) return;
     this.setState({ 
       isLeaving: "galleryImage leave",
@@ -112,7 +100,7 @@ class Photography extends React.Component {
         </p>
         <ul className={"galleryGenre"}>
           <li onClick={() => this.gotoGenre("Portraits")}>Portraits</li>
-          <li onClick={() => this.gotoGenre("Architecture")}>Architecture</li>
+          <li onClick={() => this.gotoGenre("Travel")}>Travel</li>
           <li onClick={() => this.gotoGenre("Street")}>Street</li>
         </ul>
         {this.state.isLoading

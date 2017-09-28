@@ -14,15 +14,14 @@ import rest from '../media/project_4.png';
 
 class Programming extends React.Component {
   constructor(){
-    super();
-    this.isLoading = this.isLoading.bind(this);
-    this.state = {
-      imgLoaded: 0
-    }
+  state = {
+    imgLoaded: 0
   }
-  isLoading(){
+
+  isLoading = () => {
     this.setState({ imgLoaded: this.state.imgLoaded + 1 })
   }
+  
   render(){
     return (
       <div>

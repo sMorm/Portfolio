@@ -13,16 +13,16 @@ import p7 from '../media/portrait7.jpg';
 import p8 from '../media/portrait8.jpg';
 import p9 from '../media/portrait9.jpg';
 
-// Architecture
-import l1 from '../media/landscape1.jpg';
-import l2 from '../media/landscape2.jpg';
-import l3 from '../media/landscape3.jpg';
-import l4 from '../media/landscape4.jpg';
-import l5 from '../media/landscape5.jpg';
-import l6 from '../media/landscape6.jpg';
-import l7 from '../media/landscape7.jpg';
-import l8 from '../media/landscape8.jpg';
-import l9 from '../media/landscape9.jpg';
+// Travel
+import l1 from '../media/travel1.jpg';
+import l2 from '../media/travel2.jpg';
+import l3 from '../media/travel3.jpg';
+import l4 from '../media/travel4.jpg';
+import l5 from '../media/travel5.jpg';
+import l6 from '../media/travel6.jpg';
+import l7 from '../media/travel7.jpg';
+import l8 from '../media/travel8.jpg';
+import l9 from '../media/travel9.jpg';
 
 // Street
 import s1 from '../media/street1.jpg';
@@ -50,7 +50,7 @@ const Portraits = [
   { src: p9 }
 ] 
 
-const Architecture = [
+const Travel = [
   { src: l2 },
   { src: l1 },
   { src: l3 },
@@ -159,5 +159,5 @@ const Theme = {
   },
 };
 
-export default { Portraits, Architecture, Street, Theme }
+export default { Portraits, Travel, Street, Theme }
 // export default imgArray;

@@ -16,23 +16,18 @@ import './styles/Contact.css'
 const baseURL = 'http://sample-env.5qpmzezbye.us-east-1.elasticbeanstalk.com/send/'
 
 class Contact extends React.Component {
-  constructor(){
-    super();
-    this.onSubmit = this.onSubmit.bind(this);
-    this.onChange = this.onChange.bind(this);
-    this.state ={
-      sender: '',
-      address: '',
-      subject: '',
-      text: '',
-      didSend: false,
-      failedToSend: false,
-      isSending: false,
-    }
+  state = {
+    sender: '',
+    address: '',
+    subject: '',
+    text: '',
+    didSend: false,
+    failedToSend: false,
+    isSending: false,
   }
 
-  onSubmit(event){
-    event.preventDefault();
+  onSubmit = (e) => {
+    e.preventDefault();
     this.setState({ isSending: true })
     const { sender, address, subject, text } = this.state
     let newText = text.replace(/\r?\n/g,'<br %2F>');
@@ -47,13 +42,12 @@ class Contact extends React.Component {
       else {
         this.setState({  didSend: false })
       }
-
     })
   }
 
-  onChange(event){
+  onChange = (e) => {
     this.setState({
-      [event.target.name]: event.target.value,
+      [e.target.name]: e.target.value,
     });
   }
 
