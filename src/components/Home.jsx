@@ -11,16 +11,12 @@ import About from './About.jsx'
 import profIMG from '../media/profilePic.png'
 
 class Home extends React.Component {
-  constructor(){
-    super();
-    this.loaded = this.loaded.bind(this);
-    this.state = {
-      isLoaded: false,
-      containerStyle: "profileContainer"
-    }
+  state = {
+    isLoaded: false,
+    containerStyle: "profileContainer"
   }
 
-  loaded() {
+  loaded = () => {
     this.setState({
       isLoaded: true
     })
@@ -30,6 +26,7 @@ class Home extends React.Component {
     this.setState({ containerStyle: "profileContainer leave"})
     setTimeout(() => {return;}, 500)
   }
+
   render(){
     return (
       <div>
@@ -58,7 +55,6 @@ class Home extends React.Component {
     )
   }
 }
-
 
 export default Home;
 

@@ -11,19 +11,16 @@ import './styles/NavigationStyle.css';
 import NavTab from '../media/navtab.svg';
 
 class Navigation extends React.Component {
-  constructor(){
-    super();
-    this.navClick = this.navClick.bind(this);
-    this.state={
-      navOpen: false
-    }
+  state = {
+    navOpen: false
   }
 
-  navClick(event) {
+  navClick = () => {
     this.setState({
       navOpen: !this.state.navOpen
     })
   }
+  
   render(){
     return (
       <MediaQuery query="(max-width: 300px)">
@@ -36,7 +33,7 @@ class Navigation extends React.Component {
                   <img src={NavTab} alt="tab" className="navTab" />
                 </button>
                 {this.state.navOpen
-                  ? (
+                  && (
                     <div onClick={this.navClick} className="linkContainer">
                     <hr/>
                       <NavLink to="/" className="linkMobile">Home</NavLink>
@@ -44,7 +41,6 @@ class Navigation extends React.Component {
                       <NavLink to="/contact" className="linkMobile">Contact</NavLink>
                     </div>
                   )
-                  : null
                 }
               </div>
             </div>

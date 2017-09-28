@@ -95,12 +95,12 @@
 }
 
 .react-logo {
-  animation: rotate infinite 20s linear;
+  animation: rotate infinite 50s linear;
 
 }
 
 .react-logo:hover {
-  animation: rotate infinite 2s linear;
+  animation: rotate infinite 100s linear;
 }
 
 @keyframes rotate {

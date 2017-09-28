@@ -12,16 +12,11 @@ import Photography from '../media/photography.png'
 import Programming from '../media/programming.png'
 
 class Portfolio extends React.Component {
-
-  constructor(){
-    super();
-    this.isLoading = this.isLoading.bind(this);
-    this.state = {
+  state = {
       imgLoaded: 0,
-    }
   }
 
-  isLoading(){
+  isLoading = () => {
     this.setState({ imgLoaded: this.state.imgLoaded + 1 })
   }
 
