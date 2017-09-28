@@ -1,80 +1,45 @@
 //Other Dependencies
 import shuffle from 'shuffle-array';
 
-
-// Portraits
-import p1 from '../media/portrait1.jpg';
-import p2 from '../media/portrait2.jpg';
-import p3 from '../media/portrait3.jpg';
-import p4 from '../media/portrait4.jpg';
-import p5 from '../media/portrait5.jpg';
-import p6 from '../media/portrait6.jpg';
-import p7 from '../media/portrait7.jpg';
-import p8 from '../media/portrait8.jpg';
-import p9 from '../media/portrait9.jpg';
-
-// Travel
-import l1 from '../media/travel1.jpg';
-import l2 from '../media/travel2.jpg';
-import l3 from '../media/travel3.jpg';
-import l4 from '../media/travel4.jpg';
-import l5 from '../media/travel5.jpg';
-import l6 from '../media/travel6.jpg';
-import l7 from '../media/travel7.jpg';
-import l8 from '../media/travel8.jpg';
-import l9 from '../media/travel9.jpg';
-
-// Street
-import s1 from '../media/street1.jpg';
-import s2 from '../media/street2.jpg';
-import s3 from '../media/street3.jpg';
-import s4 from '../media/street4.jpg';
-import s5 from '../media/street5.jpg';
-import s6 from '../media/street6.jpg';
-import s7 from '../media/street7.jpg';
-import s8 from '../media/street8.jpg';
-import s9 from '../media/street9.jpg';
-import s13 from '../media/street13.jpg';
-import s11 from '../media/street11.jpg';
-import s12 from '../media/street12.jpg';
+const s3bucket = 'https://s3.amazonaws.com/sereymorm.com/media/'
 
 const Portraits = [ 
-  { src: p1 }, 
-  { src: p2 }, 
-  { src: p3 }, 
-  { src: p4 }, 
-  { src: p5 }, 
-  { src: p6 },
-  { src: p7 },
-  { src: p8 },
-  { src: p9 }
+  { src: `${s3bucket}portrait1.jpg` }, 
+  { src: `${s3bucket}portrait2.jpg` }, 
+  { src: `${s3bucket}portrait3.jpg` }, 
+  { src: `${s3bucket}portrait4.jpg` }, 
+  { src: `${s3bucket}portrait5.jpg` }, 
+  { src: `${s3bucket}portrait6.jpg` }, 
+  { src: `${s3bucket}portrait7.jpg` }, 
+  { src: `${s3bucket}portrait8.jpg` }, 
+  { src: `${s3bucket}portrait9.jpg` }, 
 ] 
 
 const Travel = [
-  { src: l2 },
-  { src: l1 },
-  { src: l3 },
-  { src: l5 },
-  { src: l4 },
-  { src: l6 },
-  { src: l7 },
-  { src: l8 },
-  { src: l9 },
+  { src: `${s3bucket}travel2.jpg` },
+  { src: `${s3bucket}travel1.jpg` },
+  { src: `${s3bucket}travel3.jpg` },
+  { src: `${s3bucket}travel5.jpg` },
+  { src: `${s3bucket}travel4.jpg` },
+  { src: `${s3bucket}travel6.jpg` },
+  { src: `${s3bucket}travel7.jpg` },
+  { src: `${s3bucket}travel8.jpg` },
+  { src: `${s3bucket}travel9.jpg` },
 ]
 
 const Street = [ 
-  { src: s1 }, 
-  { src: s2 }, 
-  { src: s3 },
-  { src: s4 },
-  { src: s5 },
-  { src: s6 },
-  { src: s7 },
-  { src: s8 },
-  { src: s11},
-  { src: s9 },
-  { src: s13 },
-  { src: s12 }
+  { src: `${s3bucket}street1.jpg` },
+  { src: `${s3bucket}street2.jpg` },
+  { src: `${s3bucket}street3.jpg` },
+  { src: `${s3bucket}street4.jpg` },
+  { src: `${s3bucket}street5.jpg` },
+  { src: `${s3bucket}street6.jpg` },
+  { src: `${s3bucket}street7.jpg` },
+  { src: `${s3bucket}street8.jpg` },
+  { src: `${s3bucket}street11.jpg` },
+  { src: `${s3bucket}street9.jpg` },
+  { src: `${s3bucket}street13.jpg` },
+  { src: `${s3bucket}street12.jpg` },
 ] 
 
 shuffle(Portraits)

@@ -96,7 +96,7 @@ class Photography extends React.Component {
           Find me on&nbsp;
           <a target="_blank" href='http://vsco.co/sereymorm'>vsco</a>
           &nbsp;and&nbsp;
-          <a target="_blank" href='http://instagram/sereymorm'>instagram</a>
+          <a target="_blank" href='http://instagram.com/sereymorm'>instagram</a>
         </p>
         <ul className={"galleryGenre"}>
           <li onClick={() => this.gotoGenre("Portraits")}>Portraits</li>
